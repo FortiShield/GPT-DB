@@ -7,7 +7,6 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 import pandas as pd
-
 from gptdb._private.pydantic import BaseModel, Field
 from gptdb.vis.tags.vis_chart import Vis
 

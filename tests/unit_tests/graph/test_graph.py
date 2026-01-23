@@ -1,6 +1,5 @@
 import pytest
-
-from gptdb.storage.graph_store.graph import MemoryGraph, Edge, Vertex, Direction
+from gptdb.storage.graph_store.graph import Direction, Edge, MemoryGraph, Vertex
 
 
 @pytest.fixture

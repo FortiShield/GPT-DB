@@ -10,14 +10,13 @@ from concurrent.futures import Executor, ThreadPoolExecutor
 from datetime import datetime
 from typing import Any, Callable, Dict, List, Optional, Tuple, Type, final
 
-from jinja2 import Template
-
 from gptdb._private.pydantic import ConfigDict, Field
 from gptdb.core import LLMClient, ModelMessageRoleType, PromptTemplate
 from gptdb.util.error_types import LLMChatError
 from gptdb.util.executor_utils import blocking_func_to_async
 from gptdb.util.tracer import SpanType, root_tracer
 from gptdb.util.utils import colored
+from jinja2 import Template
 
 from ..resource.base import Resource
 from ..util.conv_utils import parse_conv_id

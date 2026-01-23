@@ -1,8 +1,6 @@
 from datetime import datetime
 from typing import Any, Dict, List, Union
 
-from sqlalchemy import Column, DateTime, Integer, String, Text, func
-
 from gptdb._private.config import Config
 from gptdb._private.pydantic import model_to_dict
 from gptdb.storage.metadata import BaseDao, Model
@@ -13,6 +11,7 @@ from gptdb_serve.rag.api.schemas import (
     DocumentServeRequest,
     DocumentServeResponse,
 )
+from sqlalchemy import Column, DateTime, Integer, String, Text, func
 
 CFG = Config()
 

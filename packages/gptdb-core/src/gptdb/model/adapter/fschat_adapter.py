@@ -34,7 +34,7 @@ if TYPE_CHECKING:
 logger = logging.getLogger(__name__)
 
 thread_local = threading.local()
-_IS_BENCHMARK = os.getenv("DB_GPT_MODEL_BENCHMARK", "False").lower() == "true"
+_IS_BENCHMARK = os.getenv("GPT_DB_MODEL_BENCHMARK", "False").lower() == "true"
 
 # If some model is not in the blacklist, but it still affects the loading of GPT-DB,
 # you can add it to the blacklist.

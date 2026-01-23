@@ -1,5 +1,4 @@
 import pytest
-
 from gptdb.storage.graph_store.memgraph_store import (
     MemoryGraphStore,
     MemoryGraphStoreConfig,

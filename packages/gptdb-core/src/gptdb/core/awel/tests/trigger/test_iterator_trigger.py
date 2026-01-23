@@ -1,7 +1,6 @@
 from typing import AsyncIterator
 
 import pytest
-
 from gptdb.core.awel import (
     DAG,
     InputSource,

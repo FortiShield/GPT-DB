@@ -1,7 +1,6 @@
 import os
 
 import pytest
-
 from gptdb.configs.model_config import ROOT_PATH
 from gptdb.core import Chunk, HumanPromptTemplate, ModelMessage, ModelRequest
 from gptdb.model.proxy.llms.chatgpt import OpenAILLMClient

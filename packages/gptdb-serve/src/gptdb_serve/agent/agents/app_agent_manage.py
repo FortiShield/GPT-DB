@@ -29,7 +29,7 @@ from ..db import GptsMessagesDao
 from ..db.gpts_app import GptsApp, GptsAppDao, GptsAppDetail, GptsAppQuery
 from ..db.gpts_conversations_db import GptsConversationsDao
 from ..team.base import TeamMode
-from .db_gpts_memory import MetaDbGptsMessageMemory, MetaDbGptsPlansMemory
+from .gpt_dbs_memory import MetaGptDbsMessageMemory, MetaGptDbsPlansMemory
 
 CFG = Config()
 logger = logging.getLogger(__name__)
@@ -44,8 +44,8 @@ class AppManager(BaseComponent, ABC):
 
         self.gpts_app = GptsAppDao()
         self.memory = GptsMemory(
-            plans_memory=MetaDbGptsPlansMemory(),
-            message_memory=MetaDbGptsMessageMemory(),
+            plans_memory=MetaGptDbsPlansMemory(),
+            message_memory=MetaGptDbsMessageMemory(),
         )
         self.agent_memory_map = {}
 

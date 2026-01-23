@@ -1,12 +1,11 @@
 from datetime import datetime
 from typing import Any, Dict, List, Union
 
-from sqlalchemy import Column, DateTime, Integer, String, Text, func, not_
-
 from gptdb._private.pydantic import model_to_dict
 from gptdb.storage.metadata import BaseDao, Model
 from gptdb.storage.metadata._base_dao import QUERY_SPEC, REQ, RES
 from gptdb_serve.rag.api.schemas import ChunkServeRequest, ChunkServeResponse
+from sqlalchemy import Column, DateTime, Integer, String, Text, func, not_
 
 
 class DocumentChunkEntity(Model):

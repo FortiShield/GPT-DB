@@ -1,5 +1,4 @@
 import pytest
-
 from gptdb.storage.metadata import db
 from gptdb_serve.core.tests.conftest import (  # noqa: F401
     asystem_app,

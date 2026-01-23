@@ -226,7 +226,7 @@ function Agent() {
               <BlurredCard
                 logo={logoFn(agent.type)}
                 onClick={() => {
-                  window.open(`https://github.com/khulnasoft/gptdbs/tree/main/${agent.type}/${agent.name}`, '_blank');
+                  window.open(`https://github.com/khulnasoft-bot/gptdbs/tree/main/${agent.type}/${agent.name}`, '_blank');
                 }}
                 description={agent.description}
                 name={agent.name}

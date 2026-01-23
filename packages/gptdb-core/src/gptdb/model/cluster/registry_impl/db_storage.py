@@ -1,5 +1,7 @@
 from datetime import datetime
 
+from gptdb.core.interface.storage import ResourceIdentifier, StorageItemAdapter
+from gptdb.storage.metadata import Model
 from sqlalchemy import (
     Boolean,
     Column,
@@ -10,9 +12,6 @@ from sqlalchemy import (
     UniqueConstraint,
 )
 from sqlalchemy.orm import Session
-
-from gptdb.core.interface.storage import ResourceIdentifier, StorageItemAdapter
-from gptdb.storage.metadata import Model
 
 from .storage import ModelInstanceStorageItem
 

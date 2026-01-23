@@ -4,11 +4,10 @@ from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Optional, Set
 
 import cachetools
-from jinja2.meta import find_undeclared_variables
-from jinja2.sandbox import Environment, SandboxedEnvironment
-
 from gptdb._private.pydantic import BaseModel, ConfigDict, Field, model_validator
 from gptdb.util.configure import ConfigInfo, DynConfig
+from jinja2.meta import find_undeclared_variables
+from jinja2.sandbox import Environment, SandboxedEnvironment
 
 VALID_TEMPLATE_KEYS = {
     "role",

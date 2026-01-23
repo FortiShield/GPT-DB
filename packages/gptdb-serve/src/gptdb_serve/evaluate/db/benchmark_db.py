@@ -2,6 +2,7 @@ import logging
 from datetime import datetime
 from typing import List, Optional
 
+from gptdb.storage.metadata import BaseDao, Model
 from sqlalchemy import (
     Column,
     DateTime,
@@ -12,8 +13,6 @@ from sqlalchemy import (
     desc,
     func,
 )
-
-from gptdb.storage.metadata import BaseDao, Model
 
 logger = logging.getLogger(__name__)
 

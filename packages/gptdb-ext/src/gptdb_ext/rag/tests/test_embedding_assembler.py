@@ -1,7 +1,6 @@
 from unittest.mock import MagicMock
 
 import pytest
-
 from gptdb.rag.embedding.embedding_factory import EmbeddingFactory
 from gptdb.rag.text_splitter.text_splitter import RDBTextSplitter
 from gptdb_ext.rag.assembler.db_schema import DBSchemaAssembler

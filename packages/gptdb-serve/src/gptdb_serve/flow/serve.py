@@ -1,8 +1,6 @@
 import logging
 from typing import List, Optional, Union
 
-from sqlalchemy import URL
-
 from gptdb.component import SystemApp
 from gptdb.core.interface.variables import (
     FernetEncryption,
@@ -10,6 +8,7 @@ from gptdb.core.interface.variables import (
 )
 from gptdb.storage.metadata import DatabaseManager
 from gptdb_serve.core import BaseServe
+from sqlalchemy import URL
 
 from .api.endpoints import init_endpoints, router
 from .config import (

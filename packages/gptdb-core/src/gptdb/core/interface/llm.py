@@ -18,7 +18,6 @@ from typing import (
 )
 
 from cachetools import TTLCache
-
 from gptdb._private.pydantic import BaseModel, model_to_dict
 from gptdb.core.interface.media import MediaContent, MediaContentType, MediaObject
 from gptdb.core.interface.message import ModelMessage, ModelMessageRoleType

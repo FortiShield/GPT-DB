@@ -3,7 +3,6 @@ from typing import Callable, Dict, Iterator, List, Optional, Tuple, Type
 
 import pytest
 import pytest_asyncio
-
 from gptdb.core import ModelMetadata, ModelOutput
 from gptdb.core.interface.parameter import (
     BaseDeployModelParameters,

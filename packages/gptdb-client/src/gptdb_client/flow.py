@@ -2,10 +2,9 @@
 
 from typing import Any, Callable, Dict, List
 
-from httpx import AsyncClient
-
 from gptdb.core.awel.flow.flow_factory import FlowPanel
 from gptdb.core.schema.api import Result
+from httpx import AsyncClient
 
 from .client import Client, ClientException
 

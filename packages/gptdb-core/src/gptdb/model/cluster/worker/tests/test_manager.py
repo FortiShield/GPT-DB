@@ -2,7 +2,6 @@ from dataclasses import asdict
 from typing import List, Tuple
 
 import pytest
-
 from gptdb.model.adapter.hf_adapter import HFLLMDeployModelParameters
 from gptdb.model.base import WorkerApplyType
 from gptdb.model.cluster.base import WorkerApplyRequest, WorkerStartupRequest

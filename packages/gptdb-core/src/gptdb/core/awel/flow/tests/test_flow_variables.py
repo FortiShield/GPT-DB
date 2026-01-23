@@ -2,7 +2,6 @@ import json
 from typing import cast
 
 import pytest
-
 from gptdb.configs import VARIABLES_SCOPE_FLOW_PRIVATE
 from gptdb.core.awel import BaseOperator, DAGVar, MapOperator
 from gptdb.core.awel.flow import (

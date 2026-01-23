@@ -1,6 +1,6 @@
 # gptdbs
 
-[gptdbs](https://github.com/khulnasoft/gptdbs) contains some data apps, AWEL operators, AWEL workflows, agents and resources 
+[gptdbs](https://github.com/khulnasoft-bot/gptdbs) contains some data apps, AWEL operators, AWEL workflows, agents and resources 
 which build upon the GPT-DB.
 
 ## Introduction
@@ -23,7 +23,7 @@ There are some concepts in `gptdbs`:
 - `app`: It includes data apps, AWEL operators, AWEL workflows, agents and resources, sometimes, we
 call it `gptdbs` app or `gptdbs` package.
 - `repo`: It is a repository of `gptdbs` apps, you can install a `gptdbs` app from a `gptdbs` repo,
-the default `gptdbs` repo is [khulnasoft/gptdbs](https://github.com/khulnasoft/gptdbs), you can
+the default `gptdbs` repo is [khulnasoft-bot/gptdbs](https://github.com/khulnasoft-bot/gptdbs), you can
 also create your own `gptdbs` repo or use other's `gptdbs` repo.
 
 ### How To Run `gptdbs`
@@ -35,7 +35,7 @@ and you can use it in the GPT-DB webserver or trigger it by command line `gptdb 
 
 ## Quick Start
 
-Let's install a `gptdbs` package named [awel-flow-simple-streaming-chat](https://github.com/khulnasoft/gptdbs/tree/main/workflow/awel-flow-simple-streaming-chat)
+Let's install a `gptdbs` package named [awel-flow-simple-streaming-chat](https://github.com/khulnasoft-bot/gptdbs/tree/main/workflow/awel-flow-simple-streaming-chat)
 
 ```bash
 gptdb app install awel-flow-simple-streaming-chat -U

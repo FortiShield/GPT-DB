@@ -198,7 +198,6 @@ async def _to_openai_stream(
     import asyncio
 
     import shortuuid
-
     from gptdb.core.schema.api import (
         ChatCompletionResponseStreamChoice,
         ChatCompletionStreamResponse,

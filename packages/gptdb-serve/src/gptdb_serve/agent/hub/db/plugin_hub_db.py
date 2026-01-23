@@ -2,6 +2,8 @@ from datetime import datetime
 from typing import List
 
 import pytz
+from gptdb.storage.metadata import BaseDao, Model
+from gptdb_serve.agent.hub.model.model import PluginHubVO
 from sqlalchemy import (
     DDL,
     Column,
@@ -12,9 +14,6 @@ from sqlalchemy import (
     UniqueConstraint,
     func,
 )
-
-from gptdb.storage.metadata import BaseDao, Model
-from gptdb_serve.agent.hub.model.model import PluginHubVO
 
 # TODO We should consider that the production environment does not have permission to
 #  execute the DDL

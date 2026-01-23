@@ -2,6 +2,8 @@ import re
 from datetime import datetime
 from typing import List, Optional
 
+from gptdb.agent.util.conv_utils import parse_conv_id
+from gptdb.storage.metadata import BaseDao, Model
 from sqlalchemy import (
     Boolean,
     Column,
@@ -14,9 +16,6 @@ from sqlalchemy import (
     desc,
     or_,
 )
-
-from gptdb.agent.util.conv_utils import parse_conv_id
-from gptdb.storage.metadata import BaseDao, Model
 
 
 class GptsMessagesEntity(Model):

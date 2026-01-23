@@ -1,11 +1,10 @@
 import logging
 from contextvars import ContextVar
 
+from gptdb.util.tracer import Tracer, TracerContext
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request
 from starlette.types import ASGIApp
-
-from gptdb.util.tracer import Tracer, TracerContext
 
 from .base import _parse_span_id
 

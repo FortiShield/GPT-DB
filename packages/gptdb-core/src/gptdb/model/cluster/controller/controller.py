@@ -4,7 +4,6 @@ from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Literal, Optional
 
 from fastapi import APIRouter
-
 from gptdb.component import BaseComponent, ComponentType, SystemApp
 from gptdb.configs.model_config import resolve_root_path
 from gptdb.model.base import ModelInstance

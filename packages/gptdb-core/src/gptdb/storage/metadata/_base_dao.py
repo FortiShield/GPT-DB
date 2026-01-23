@@ -1,11 +1,10 @@
 from contextlib import contextmanager
 from typing import Any, Dict, Generic, Iterator, List, Optional, TypeVar, Union
 
-from sqlalchemy import desc
-from sqlalchemy.orm.session import Session
-
 from gptdb._private.pydantic import model_to_dict
 from gptdb.util.pagination_utils import PaginationResult
+from sqlalchemy import desc
+from sqlalchemy.orm.session import Session
 
 from .db_manager import BaseQuery, DatabaseManager, db
 

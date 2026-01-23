@@ -9,9 +9,6 @@ from dataclasses import dataclass, field
 from typing import Any, List, Optional, Tuple
 
 import numpy as np
-from sqlalchemy import JSON, Column, String, Table, func, text
-from sqlalchemy.dialects.mysql import LONGTEXT
-
 from gptdb.core import Chunk, Embeddings
 from gptdb.core.awel.flow import Parameter, ResourceCategory, register_resource
 from gptdb.storage.vector_store.base import (
@@ -22,6 +19,8 @@ from gptdb.storage.vector_store.base import (
 )
 from gptdb.storage.vector_store.filters import FilterOperator, MetadataFilters
 from gptdb.util.i18n_utils import _
+from sqlalchemy import JSON, Column, String, Table, func, text
+from sqlalchemy.dialects.mysql import LONGTEXT
 
 logger = logging.getLogger(__name__)
 

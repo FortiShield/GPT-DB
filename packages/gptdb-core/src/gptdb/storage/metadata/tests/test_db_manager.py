@@ -4,13 +4,12 @@ import tempfile
 from typing import Type
 
 import pytest
-from sqlalchemy import Column, Integer, String
-
 from gptdb.storage.metadata.db_manager import (
     BaseModel,
     DatabaseManager,
     create_model,
 )
+from sqlalchemy import Column, Integer, String
 
 
 @pytest.fixture

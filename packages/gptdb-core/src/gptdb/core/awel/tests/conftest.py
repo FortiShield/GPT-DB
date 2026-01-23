@@ -3,7 +3,6 @@ from typing import AsyncIterator, List
 
 import pytest
 import pytest_asyncio
-
 from gptdb.component import SystemApp
 
 from ...interface.variables import (

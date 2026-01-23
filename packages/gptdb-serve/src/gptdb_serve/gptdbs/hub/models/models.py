@@ -5,10 +5,9 @@ You can define your own models and DAOs here
 from datetime import datetime
 from typing import Any, Dict, Optional, Union
 
-from sqlalchemy import Column, DateTime, Index, Integer, String, UniqueConstraint, desc
-
 from gptdb.storage.metadata import BaseDao, Model
 from gptdb.util.pagination_utils import PaginationResult
+from sqlalchemy import Column, DateTime, Index, Integer, String, UniqueConstraint, desc
 
 from ..api.schemas import ServeRequest, ServerResponse
 from ..config import SERVER_APP_TABLE_NAME, ServeConfig

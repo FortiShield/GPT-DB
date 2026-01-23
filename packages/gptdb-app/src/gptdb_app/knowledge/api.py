@@ -4,7 +4,6 @@ import shutil
 from typing import List
 
 from fastapi import APIRouter, Depends, File, Form, UploadFile
-
 from gptdb._private.config import Config
 from gptdb.configs import TAG_KEY_KNOWLEDGE_FACTORY_DOMAIN_TYPE
 from gptdb.configs.model_config import (

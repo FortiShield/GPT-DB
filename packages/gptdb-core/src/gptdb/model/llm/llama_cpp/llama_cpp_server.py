@@ -27,11 +27,11 @@ from ...utils.parse_utils import (
 logger = logging.getLogger(__name__)
 
 try:
+    from llama_cpp_server_py_core import ChatCompletionStreamResponse  # noqa: F401
+    from llama_cpp_server_py_core import CompletionResponse  # noqa: F401
     from llama_cpp_server_py_core import (
         ChatCompletionRequest,
-        ChatCompletionStreamResponse,  # noqa: F401
         CompletionRequest,
-        CompletionResponse,  # noqa: F401
         LlamaCppServer,
     )
 except ImportError:

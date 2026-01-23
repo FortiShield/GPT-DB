@@ -9,7 +9,7 @@
   },
   "author": "",
   "license": "ISC",
-  "repository": "https://github.com/khulnasoft/GPT-DB-Web.git",
+  "repository": "https://github.com/khulnasoft-bot/GPT-DB-Web.git",
   "scripts": {
     "start": "NODE_OPTIONS=--max_old_space_size=8192 next start",
     "dev": "NODE_OPTIONS=--max_old_space_size=8192 next dev",

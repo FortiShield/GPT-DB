@@ -5,7 +5,6 @@ from typing import AsyncIterator, Dict, List, Optional, Tuple, cast
 
 import schedule
 from fastapi import HTTPException
-
 from gptdb._private.config import Config
 from gptdb._private.pydantic import model_to_json
 from gptdb.agent import AgentDummyTrigger

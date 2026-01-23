@@ -40,10 +40,10 @@ function getNextVersionName() {
 const config = {
   title: 'GPT-DB',
   tagline: 'Revolutionizing Database Interactions with Private LLM Technology',
-  favicon: 'img/eosphoros.jpeg',
+  favicon: 'img/khulnasoft.jpeg',
 
   // Set the production url of your site here
-  url: 'http://docs.gptdb.cn',
+  url: 'http://gpt.khulnasoft.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -233,13 +233,13 @@ const config = {
             className: 'header-github-link',
           },
           {
-            href: 'https://huggingface.co/eosphoros',
+            href: 'https://huggingface.co/khulnasoft',
             position: 'right',
             label: "HuggingFace",
             className: 'header-huggingface-link',
           },
           {
-            href: 'https://www.yuque.com/eosphoros/gptdb-docs/bex30nsv60ru0fmx',
+            href: 'https://www.yuque.com/khulnasoft/gptdb-docs/bex30nsv60ru0fmx',
             position: 'left',
             label: "中文文档",
           },
@@ -271,7 +271,7 @@ const config = {
               },
               {
                 label: "HuggingFace",
-                href: "https://huggingface.co/eosphoros"
+                href: "https://huggingface.co/khulnasoft"
               }
             ]
           },
@@ -284,7 +284,7 @@ const config = {
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/DbGpt80100',
+                href: 'https://twitter.com/GptDb80100',
               },
             ],
           },

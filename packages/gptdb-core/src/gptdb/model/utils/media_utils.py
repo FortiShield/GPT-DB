@@ -6,11 +6,10 @@ from typing import Any, Dict, List, Sequence, Union
 import numpy as np
 import requests
 import torch
-from PIL import Image
-from typing_extensions import Optional, TypedDict
-
 from gptdb.core.interface.media import MediaContent, MediaObject
 from gptdb.core.interface.message import ModelMessage
+from PIL import Image
+from typing_extensions import Optional, TypedDict
 
 IMAGE_TYPE = Image.Image
 VIDEO_TYPE = Union[torch.Tensor, list[Image.Image], np.ndarray]

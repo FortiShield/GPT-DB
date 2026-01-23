@@ -1,7 +1,6 @@
 from typing import Optional
 
 from fastapi import APIRouter, Query
-
 from gptdb_serve.agent.db.gpts_app import (
     GptsApp,
     GptsAppCollectionDao,

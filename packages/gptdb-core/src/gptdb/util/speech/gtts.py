@@ -3,7 +3,6 @@
 import os
 
 import gtts
-
 from gptdb.util.speech.base import VoiceBase
 
 

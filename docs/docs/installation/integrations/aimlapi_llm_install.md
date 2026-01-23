@@ -4,11 +4,11 @@
 
 ### This section describes how to use the AI/ML API provider with GPT-DB.
 
-1. Sign up at [AI/ML API](https://aimlapi.com/app/?utm_source=db_gpt&utm_medium=github&utm_campaign=integration) and generate an API key.
+1. Sign up at [AI/ML API](https://aimlapi.com/app/?utm_source=gpt_db&utm_medium=github&utm_campaign=integration) and generate an API key.
 2. Set the environment variable `AIMLAPI_API_KEY` with your key.
 3. Use the `configs/gptdb-proxy-aimlapi.toml` configuration when starting GPT-DB.
 
-### You can look up models at [https://aimlapi.com/models/](https://aimlapi.com/models/?utm_source=db_gpt&utm_medium=github&utm_campaign=integration)
+### You can look up models at [https://aimlapi.com/models/](https://aimlapi.com/models/?utm_source=gpt_db&utm_medium=github&utm_campaign=integration)
 
 ### Or you can use docker/base/Dockerfile to run GPT-DB with AI/ML API:
 

@@ -5,7 +5,6 @@ from typing import TYPE_CHECKING, Any, List
 from fastapi import HTTPException, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
-
 from gptdb._private.pydantic import BaseModel, Field, model_serializer
 from gptdb.core.schema.api import Result
 from gptdb.util.parameter_utils import ParameterDescription

@@ -1,5 +1,4 @@
 import pytest
-
 from gptdb.component import SystemApp
 from gptdb.util.tracer import (
     DefaultTracer,

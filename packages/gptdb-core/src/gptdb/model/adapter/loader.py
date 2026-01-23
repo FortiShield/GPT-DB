@@ -74,7 +74,6 @@ def huggingface_loader(
     llm_adapter: LLMModelAdapter, model_params: LLMDeployModelParameters
 ):
     import torch
-
     from gptdb.model.llm.compression import compress_module
 
     if not isinstance(model_params, HFLLMDeployModelParameters):

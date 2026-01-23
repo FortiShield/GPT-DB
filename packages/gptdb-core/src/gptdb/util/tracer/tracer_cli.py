@@ -6,7 +6,6 @@ from datetime import datetime
 from typing import Dict, Iterable
 
 import click
-
 from gptdb.configs.model_config import LOGDIR
 from gptdb.util.tracer import SpanType, SpanTypeRunName
 

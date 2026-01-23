@@ -1,5 +1,4 @@
 import pytest
-
 from gptdb.datasource.conn_tugraph import TuGraphConnector
 
 # Set database connection parameters.

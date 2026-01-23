@@ -3,7 +3,6 @@ from abc import ABC
 from typing import List
 
 from fastapi import APIRouter, Body, File, UploadFile
-
 from gptdb.agent.resource.tool.autogpt.plugins_util import scan_plugins
 from gptdb.agent.resource.tool.pack import AutoGPTPluginToolPack
 from gptdb.component import BaseComponent, ComponentType, SystemApp

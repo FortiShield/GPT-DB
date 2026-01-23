@@ -2,7 +2,6 @@ import struct
 from typing import Any, Dict, List, Optional, Union
 
 import olefile
-
 from gptdb.core import Document
 from gptdb.rag.knowledge.base import (
     ChunkStrategy,

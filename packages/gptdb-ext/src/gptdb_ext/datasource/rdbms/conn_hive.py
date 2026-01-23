@@ -5,8 +5,6 @@ from typing import Any, Dict, Optional, Type, cast
 from urllib.parse import quote
 from urllib.parse import quote_plus as urlquote
 
-from sqlalchemy import create_engine
-
 from gptdb.core.awel.flow import (
     TAGS_ORDER_HIGH,
     ResourceCategory,
@@ -15,6 +13,7 @@ from gptdb.core.awel.flow import (
 from gptdb.datasource.parameter import BaseDatasourceParameters
 from gptdb.datasource.rdbms.base import RDBMSConnector
 from gptdb.util.i18n_utils import _
+from sqlalchemy import create_engine
 
 
 @auto_register_resource(

@@ -4,8 +4,6 @@ import json
 import logging
 from typing import Any, AsyncGenerator, Dict, Iterator, List, Optional, Tuple, Union
 
-from packaging.version import Version
-
 from gptdb.storage.graph_store.graph import (
     Direction,
     Edge,
@@ -20,6 +18,7 @@ from gptdb_ext.storage.knowledge_graph.community.base import (
     Community,
     GraphStoreAdapter,
 )
+from packaging.version import Version
 
 logger = logging.getLogger(__name__)
 

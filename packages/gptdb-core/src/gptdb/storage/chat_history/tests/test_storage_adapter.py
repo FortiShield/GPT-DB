@@ -1,7 +1,6 @@
 from typing import List
 
 import pytest
-
 from gptdb.core.interface.message import AIMessage, HumanMessage, StorageConversation
 from gptdb.core.interface.storage import QuerySpec
 from gptdb.storage.chat_history.chat_history_db import (

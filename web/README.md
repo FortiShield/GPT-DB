@@ -1,6 +1,6 @@
 
 <h1 align="center">
-  <a href="https://gptdb.site"><img width="96" src="https://github.com/khulnasoft/GPT-DB-Web/assets/10321453/062ee3ea-fac2-4437-a392-f4bc5451d116" alt="GPT-DB"></a>
+  <a href="https://gptdb.site"><img width="96" src="https://github.com/khulnasoft-bot/GPT-DB-Web/assets/10321453/062ee3ea-fac2-4437-a392-f4bc5451d116" alt="GPT-DB"></a>
   <br>
   GPT-DB-Web
 </h1>
@@ -8,14 +8,14 @@
 _<p align="center">GPT-DB Chat UI, LLM to Vision.</p>_
 
 <p align="center">
-  <a href="https://github.com/khulnasoft/GPT-DB-Web/blob/main/LICENSE">
+  <a href="https://github.com/khulnasoft-bot/GPT-DB-Web/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg?label=License&style=flat" />
   </a>
   <a href="https://github.com/khulnasoft/GPT-DB/releases">
     <img alt="Release Notes" src="https://img.shields.io/github/release/khulnasoft/GPT-DB" />
   </a>
-  <a href="https://github.com/khulnasoft/GPT-DB-Web/issues">
-    <img alt="Open Issues" src="https://img.shields.io/github/issues-raw/khulnasoft/GPT-DB-Web" />
+  <a href="https://github.com/khulnasoft-bot/GPT-DB-Web/issues">
+    <img alt="Open Issues" src="https://img.shields.io/github/issues-raw/khulnasoft-bot/GPT-DB-Web" />
   </a>
   <a href="https://discord.gg/7uQnPuveTY">
     <img alt="Discord" src="https://dcbadge.vercel.app/api/server/7uQnPuveTY?compact=true&style=flat" />
@@ -89,7 +89,7 @@ Enjoy using GPT-DB-Web to build stunning UIs for your AI and GPT projects.
 
 🌟 If you find it helpful, don't forget to give it a star on GitHub! Stars are like little virtual hugs that keep us going! We appreciate every single one we receive.
 
-For any queries or issues, feel free to open an [issue](https://github.com/khulnasoft/GPT-DB-Web/issues) on the repository.
+For any queries or issues, feel free to open an [issue](https://github.com/khulnasoft-bot/GPT-DB-Web/issues) on the repository.
 
 Happy coding! 😊
 

@@ -7,7 +7,6 @@ from dataclasses import dataclass
 from typing import Optional
 
 import msgpack
-
 from gptdb.core.interface.cache import (
     CacheConfig,
     CacheKey,

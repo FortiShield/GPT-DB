@@ -6,17 +6,6 @@ from enum import Enum
 from itertools import groupby
 from typing import Any, Dict, List, Optional, Union
 
-from sqlalchemy import (
-    Column,
-    DateTime,
-    Index,
-    Integer,
-    String,
-    Text,
-    UniqueConstraint,
-    or_,
-)
-
 from gptdb._private.pydantic import (
     BaseModel,
     ConfigDict,
@@ -36,6 +25,16 @@ from gptdb_serve.agent.app.recommend_question.recommend_question import (
 )
 from gptdb_serve.agent.model import NativeTeamContext
 from gptdb_serve.agent.team.base import TeamMode
+from sqlalchemy import (
+    Column,
+    DateTime,
+    Index,
+    Integer,
+    String,
+    Text,
+    UniqueConstraint,
+    or_,
+)
 
 logger = logging.getLogger(__name__)
 

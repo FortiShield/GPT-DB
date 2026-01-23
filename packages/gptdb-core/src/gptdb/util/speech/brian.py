@@ -2,7 +2,6 @@ import logging
 import os
 
 import requests
-
 from gptdb.util.speech.base import VoiceBase
 
 

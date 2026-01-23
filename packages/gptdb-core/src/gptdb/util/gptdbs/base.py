@@ -14,7 +14,7 @@ GPTDBS_HOME = os.getenv("GPTDBS_HOME", str(DEFAULT_GPTDBS_DIR))
 GPTDBS_REPO_HOME = os.getenv("GPTDBS_REPO_HOME", str(DEFAULT_GPTDBS_DIR / "repos"))
 
 DEFAULT_REPO_MAP = {
-    "eosphoros/gptdbs": "https://github.com/khulnasoft/gptdbs.git",
+    "khulnasoft/gptdbs": "https://github.com/khulnasoft-bot/gptdbs.git",
 }
 
 DEFAULT_PACKAGES = ["agents", "apps", "operators", "workflow", "resources"]

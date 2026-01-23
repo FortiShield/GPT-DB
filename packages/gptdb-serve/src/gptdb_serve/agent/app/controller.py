@@ -2,7 +2,6 @@ import logging
 from typing import List, Optional
 
 from fastapi import APIRouter, Depends
-
 from gptdb._private.config import Config
 from gptdb.agent.core.agent_manage import get_agent_manager
 from gptdb.agent.resource.manage import get_resource_manager

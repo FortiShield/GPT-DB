@@ -1,7 +1,6 @@
 from typing import Any, Dict, List, Optional, Tuple
 
 import pytest
-
 from gptdb.util.function_utils import rearrange_args_by_type, type_to_string
 
 

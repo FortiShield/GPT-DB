@@ -7,12 +7,11 @@ import uuid
 from datetime import datetime
 from typing import Any, Dict, Union
 
-from sqlalchemy import Column, DateTime, Integer, String, Text, UniqueConstraint
-
 from gptdb._private.pydantic import model_to_dict
 from gptdb.agent.core.schema import Status
 from gptdb.storage.metadata import BaseDao, Model
 from gptdb.storage.metadata._base_dao import QUERY_SPEC, REQ, RES
+from sqlalchemy import Column, DateTime, Integer, String, Text, UniqueConstraint
 
 from ..api.schemas import EvaluateServeRequest, EvaluateServeResponse
 from ..config import ServeConfig

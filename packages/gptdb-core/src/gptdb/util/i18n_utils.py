@@ -6,13 +6,14 @@ import os
 from functools import cache
 from typing import Any, Callable, Optional, Tuple
 
+from gptdb.configs.model_config import LOCALES_DIR, ROOT_PATH
+
 try:
     from pydantic_core import SchemaSerializer, core_schema
 except ImportError:
     SchemaSerializer = None
     core_schema = None
 
-from gptdb.configs.model_config import LOCALES_DIR, ROOT_PATH
 
 _DOMAIN = "gptdb"
 

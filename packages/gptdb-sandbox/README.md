@@ -1,18 +1,28 @@
 # GPT-DB Sandbox
 
-背景：AI Agent 逐步成为使用 AI 解决真实环境中各类问题的有力工具，然而真实环境的任务隔离性和安全性是企业落地中必然要考虑的问题。 GPT-DB Agent 目前不支持统一、可扩展的安全沙箱环境。 
+`gptdb-sandbox` is a sub-package of **GPT-DB** that provides a secure sandbox environment for executing AI agents and their tools. As AI agents become more powerful, ensuring task isolation and security is crucial for enterprise adoption. This package aims to provide a unified and extensible sandbox solution for the GPT-DB Agent.
 
-#### 预期目标：
+## 🎯 Project Goals
 
- 为 GPT-DB Agent 实现一个安全的沙箱执行环境（支持 Agent、工具的运行和多语言代码的执行）。 分三个部分：
+The primary objective is to implement a secure execution environment for the GPT-DB Agent that supports agents, tools, and multi-language code execution. The project is divided into three main parts:
 
-1. 基于 GPT-DB Agent + Docker 容器实现安全的代码执行环境，支持 Python、Shell、Node.js 等代码的执行，改造 GPT-DB 现有的代码执行智能体。 
-2. 支持有状态的沙箱环境，多次代码执行可以在相同的环境中，并且上次环境的变更能影响下次的执行（例如第一次执行安装 pypi 依赖，第二次执行安装后的依赖能正常使用） 
-3. 插件化的安全沙箱环境实现，设计统一的沙箱环境接口，支持 Docker、Podman、本地进程（基Cgroup/Namespace/WebAssembly等）等沙箱环境的实现。
+1.  **Secure Code Execution Environment**: Implement a secure code execution environment using Docker containers, supporting languages like Python, Shell, and Node.js. This involves refactoring the existing code execution agent in GPT-DB.
+2.  **Stateful Sandbox**: Support a stateful sandbox where multiple code executions can run in the same environment, and changes from one execution persist to the next. For example, a package installed in one session should be available in subsequent sessions.
+3.  **Pluggable Architecture**: Design a unified interface for the sandbox environment to support various pluggable implementations, such as Docker, Podman, and local processes (using technologies like Cgroups, Namespaces, or WebAssembly).
 
-#### 产出要求：
+##  deliverables
 
-1. 项目设计文档（含架构图、原理图、实现细节等）
-2. 实现安全沙箱环境的核心模块（统一沙箱环境接口，Docker 实现和本地进程的实现）
-3. 提供完整的使用教程文档说明
-4. 基于沙箱环境，开发一个支持 Python 等代码执行的 Agent 案例
+The expected deliverables for this project include:
+
+1.  **Project Design Document**: A comprehensive document covering the architecture, design principles, and implementation details.
+2.  **Core Sandbox Module**: The implementation of the core sandbox module, including the unified interface and implementations for Docker and local processes.
+3.  **User Guide**: A complete tutorial and documentation for using the sandbox environment.
+4.  **Example Agent**: A sample agent that demonstrates code execution (e.g., Python) within the secure sandbox.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please see the [contributing guidelines](../../CONTRIBUTING.md) for more information.
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](../../LICENSE) file for details.

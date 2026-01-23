@@ -13,7 +13,6 @@ from typing import Any, AsyncIterator, Awaitable, Callable, Dict, List, Optional
 
 from fastapi import APIRouter
 from fastapi.responses import StreamingResponse
-
 from gptdb.component import SystemApp
 from gptdb.configs.model_config import LOGDIR
 from gptdb.core import ModelMetadata, ModelOutput
@@ -973,7 +972,9 @@ def _setup_fastapi(
             system_app._asgi_app = app
 
     if worker_params.standalone:
-        from gptdb.model.cluster.controller.controller import initialize_controller
+        from gptdb.model.cluster.controller.controller import (
+            initialize_controller,
+        )
         from gptdb.model.cluster.controller.controller import (
             router as controller_router,
         )

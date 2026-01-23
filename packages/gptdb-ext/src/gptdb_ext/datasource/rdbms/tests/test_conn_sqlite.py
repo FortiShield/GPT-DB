@@ -6,7 +6,6 @@ import os
 import tempfile
 
 import pytest
-
 from gptdb_ext.datasource.rdbms.conn_sqlite import SQLiteConnector
 
 

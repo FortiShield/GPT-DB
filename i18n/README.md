@@ -131,3 +131,4 @@ Now support the following languages:
 - fr
 - ko
 - ru
+- bn_BD

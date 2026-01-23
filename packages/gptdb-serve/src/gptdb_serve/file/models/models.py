@@ -5,9 +5,8 @@ You can define your own models and DAOs here
 from datetime import datetime
 from typing import Any, Dict, Union
 
-from sqlalchemy import Column, DateTime, Integer, String, Text, UniqueConstraint
-
 from gptdb.storage.metadata import BaseDao, Model
+from sqlalchemy import Column, DateTime, Integer, String, Text, UniqueConstraint
 
 from ..api.schemas import ServeRequest, ServerResponse
 from ..config import SERVER_APP_TABLE_NAME, ServeConfig

@@ -1,7 +1,6 @@
 import logging
 
 from fastapi import APIRouter, Depends
-
 from gptdb_app.openapi.api_view_model import Result
 from gptdb_serve.agent.app.recommend_question.recommend_question import (
     RecommendQuestion,

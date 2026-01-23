@@ -5,14 +5,13 @@ import os
 import ssl
 from typing import Any, Callable, Dict, List, Optional, Sequence, Type, Union, cast
 
-from mcp import ClientSession
-
 from gptdb.util.json_utils import parse_or_raise_error
+from mcp import ClientSession
 
 from ...util.mcp_utils import sse_client
 from ..base import EXECUTE_ARGS_TYPE, PARSE_EXECUTE_ARGS_FUNCTION, ResourceType, T
 from ..pack import Resource, ResourcePack
-from .base import DB_GPT_TOOL_IDENTIFIER, BaseTool, FunctionTool, ToolFunc
+from .base import GPT_DB_TOOL_IDENTIFIER, BaseTool, FunctionTool, ToolFunc
 from .exceptions import ToolExecutionException, ToolNotFoundException
 
 ToolResourceType = Union[Resource, BaseTool, List[BaseTool], ToolFunc, List[ToolFunc]]
@@ -23,8 +22,8 @@ logger = logging.getLogger(__name__)
 def _is_function_tool(resources: Any) -> bool:
     return (
         callable(resources)
-        and hasattr(resources, DB_GPT_TOOL_IDENTIFIER)
-        and getattr(resources, DB_GPT_TOOL_IDENTIFIER)
+        and hasattr(resources, GPT_DB_TOOL_IDENTIFIER)
+        and getattr(resources, GPT_DB_TOOL_IDENTIFIER)
         and hasattr(resources, "_tool")
         and isinstance(getattr(resources, "_tool"), BaseTool)
     )

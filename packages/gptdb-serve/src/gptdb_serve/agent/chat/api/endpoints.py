@@ -3,7 +3,6 @@ from typing import List, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from fastapi.security.http import HTTPAuthorizationCredentials, HTTPBearer
-
 from gptdb.component import SystemApp
 from gptdb.util import PaginationResult
 from gptdb_serve.core import Result

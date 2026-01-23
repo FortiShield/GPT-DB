@@ -6,8 +6,6 @@ from typing import AsyncIterator, Optional
 
 from fastapi import APIRouter, Body, Depends, HTTPException
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
-from starlette.responses import JSONResponse, StreamingResponse
-
 from gptdb._private.pydantic import model_to_dict, model_to_json
 from gptdb.component import SystemApp, logger
 from gptdb.core.schema.api import (
@@ -34,6 +32,7 @@ from gptdb_app.scene import BaseChat, ChatParam, ChatScene
 from gptdb_client.schema import ChatCompletionRequestBody, ChatMode
 from gptdb_serve.agent.agents.controller import multi_agents
 from gptdb_serve.flow.api.endpoints import get_service
+from starlette.responses import JSONResponse, StreamingResponse
 
 router = APIRouter()
 api_settings = APISettings()

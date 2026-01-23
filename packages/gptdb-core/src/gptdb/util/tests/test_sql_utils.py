@@ -1,5 +1,4 @@
 import pytest
-
 from gptdb.util.sql_utils import remove_sql_comments
 
 

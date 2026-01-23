@@ -6,8 +6,6 @@ import os
 import tempfile
 from typing import Any, Iterable, List, Optional, Tuple, Type
 
-from sqlalchemy import create_engine, text
-
 from gptdb.core.awel.flow import (
     TAGS_ORDER_HIGH,
     ResourceCategory,
@@ -16,6 +14,7 @@ from gptdb.core.awel.flow import (
 from gptdb.datasource.parameter import BaseDatasourceParameters
 from gptdb.datasource.rdbms.base import RDBMSConnector
 from gptdb.util.i18n_utils import _
+from sqlalchemy import create_engine, text
 
 logger = logging.getLogger(__name__)
 

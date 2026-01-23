@@ -5,7 +5,6 @@ Run unit test with command: pytest gptdb/datasource/rdbms/tests/test_conn_duckdb
 import tempfile
 
 import pytest
-
 from gptdb_ext.datasource.rdbms.conn_duckdb import DuckDbConnector
 
 

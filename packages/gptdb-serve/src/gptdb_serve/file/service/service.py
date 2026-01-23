@@ -2,7 +2,6 @@ import logging
 from typing import BinaryIO, List, Optional, Tuple
 
 from fastapi import HTTPException, UploadFile
-
 from gptdb.component import SystemApp
 from gptdb.core.interface.file import FileMetadata, FileStorageClient, FileStorageURI
 from gptdb.storage.metadata import BaseDao

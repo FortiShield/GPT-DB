@@ -12,7 +12,6 @@ from urllib.parse import parse_qs, urlparse
 import boto3
 from botocore.config import Config
 from botocore.exceptions import ClientError
-
 from gptdb.core.interface.file import FileMetadata, StorageBackend
 
 logger = logging.getLogger(__name__)

@@ -10,7 +10,6 @@ import charset_normalizer
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-
 from gptdb._private.pydantic import BaseModel, Field, model_to_dict
 from gptdb.vis.tags.vis_chart import VisChart
 

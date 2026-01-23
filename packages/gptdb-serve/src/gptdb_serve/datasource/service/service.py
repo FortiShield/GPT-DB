@@ -3,7 +3,6 @@ import logging
 from typing import List, Optional, Union
 
 from fastapi import HTTPException
-
 from gptdb._private.config import Config
 from gptdb._private.pydantic import model_to_dict
 from gptdb.component import ComponentType, SystemApp

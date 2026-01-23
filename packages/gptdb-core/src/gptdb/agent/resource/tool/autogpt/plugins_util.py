@@ -150,7 +150,7 @@ def update_from_git(
         url = github_repo + "/archive/refs/heads/" + branch_name + ".zip"
         plugin_repo_name = github_repo.strip("/").split("/")[-1]
     else:
-        url = "https://github.com/khulnasoft/GPT-DB-Plugins/archive/refs/heads/main.zip"
+        url = "https://github.com/khulnasoft-bot/GPT-DB-Plugins/archive/refs/heads/main.zip"
         plugin_repo_name = "GPT-DB-Plugins"
     try:
         session = requests.Session()

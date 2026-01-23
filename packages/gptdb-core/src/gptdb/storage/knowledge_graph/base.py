@@ -5,12 +5,11 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from typing import List, Optional
 
-from pydantic import Field
-
 from gptdb.core import Chunk, Embeddings
 from gptdb.storage.base import IndexStoreBase, IndexStoreConfig
 from gptdb.storage.graph_store.graph import Graph
 from gptdb.util import RegisterParameters
+from pydantic import Field
 
 logger = logging.getLogger(__name__)
 

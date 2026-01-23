@@ -1,9 +1,8 @@
 from typing import Type
 
-from sqlalchemy.orm import Session
-
 from gptdb.core.interface.storage import StorageItemAdapter
 from gptdb.core.interface.variables import StorageVariables, VariablesIdentifier
+from sqlalchemy.orm import Session
 
 from .models import VariablesEntity
 

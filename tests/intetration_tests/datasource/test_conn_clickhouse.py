@@ -19,7 +19,6 @@
 from typing import Dict, List
 
 import pytest
-
 from gptdb.datasource.rdbms.conn_clickhouse import ClickhouseConnector
 
 

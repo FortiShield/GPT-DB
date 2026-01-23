@@ -116,13 +116,12 @@ class SandboxCodeAction(Action[None]):
 
     async def execute_code_blocks(self, code_blocks):
         """Execute the code blocks and return the result."""
+        from gptdb.util.code.server import get_code_server
         from lyric import (
             PyTaskFsConfig,
             PyTaskMemoryConfig,
             PyTaskResourceConfig,
         )
-
-        from gptdb.util.code.server import get_code_server
 
         fs = PyTaskFsConfig(
             preopens=[

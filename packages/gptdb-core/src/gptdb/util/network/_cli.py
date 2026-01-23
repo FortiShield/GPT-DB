@@ -199,7 +199,6 @@ def _start_http_forward(
     import uvicorn
     from fastapi import BackgroundTasks, Request, Response
     from fastapi.responses import StreamingResponse
-
     from gptdb.util.fastapi import create_app
 
     app = create_app()

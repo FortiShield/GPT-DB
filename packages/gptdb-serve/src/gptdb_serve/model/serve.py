@@ -1,14 +1,13 @@
 import logging
 from typing import List, Optional, Union
 
-from sqlalchemy import URL
-
 from gptdb.component import SystemApp
 from gptdb.core import InMemoryStorage, StorageInterface
 from gptdb.storage.metadata import DatabaseManager
 from gptdb.storage.metadata.db_storage import SQLAlchemyStorage
 from gptdb.util.serialization.json_serialization import JsonSerializer
 from gptdb_serve.core import BaseServe
+from sqlalchemy import URL
 
 from .api.endpoints import init_endpoints, router
 from .config import (  # noqa: F401

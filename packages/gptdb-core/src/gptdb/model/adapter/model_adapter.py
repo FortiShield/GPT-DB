@@ -14,7 +14,7 @@ from gptdb.model.base import ModelType
 logger = logging.getLogger(__name__)
 
 thread_local = threading.local()
-_IS_BENCHMARK = os.getenv("DB_GPT_MODEL_BENCHMARK", "False").lower() == "true"
+_IS_BENCHMARK = os.getenv("GPT_DB_MODEL_BENCHMARK", "False").lower() == "true"
 
 
 @cache

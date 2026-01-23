@@ -3,8 +3,6 @@
 from dataclasses import dataclass, field
 from typing import Any, Iterable, Optional, Type
 
-from sqlalchemy import create_engine, text
-
 from gptdb.core.awel.flow import (
     TAGS_ORDER_HIGH,
     ResourceCategory,
@@ -13,6 +11,7 @@ from gptdb.core.awel.flow import (
 from gptdb.datasource.parameter import BaseDatasourceParameters
 from gptdb.datasource.rdbms.base import RDBMSConnector
 from gptdb.util.i18n_utils import _
+from sqlalchemy import create_engine, text
 
 
 @auto_register_resource(

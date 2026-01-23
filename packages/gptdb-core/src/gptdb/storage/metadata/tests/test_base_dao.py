@@ -1,8 +1,6 @@
 from typing import Any, Dict, Optional, Type, Union
 
 import pytest
-from sqlalchemy import Column, Integer, String
-
 from gptdb._private.pydantic import BaseModel as PydanticBaseModel
 from gptdb._private.pydantic import Field, model_to_dict
 from gptdb.storage.metadata.db_manager import (
@@ -11,6 +9,7 @@ from gptdb.storage.metadata.db_manager import (
     PaginationResult,
     create_model,
 )
+from sqlalchemy import Column, Integer, String
 
 from .._base_dao import BaseDao
 

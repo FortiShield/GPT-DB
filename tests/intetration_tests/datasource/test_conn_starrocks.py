@@ -20,7 +20,6 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 """
 
 import pytest
-
 from gptdb_ext.datasource.rdbms.conn_starrocks import StarRocksConnector
 
 

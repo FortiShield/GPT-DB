@@ -3,7 +3,6 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 
 import pytest
-
 from gptdb.core.interface.storage import InMemoryStorage
 from gptdb.util.serialization.json_serialization import JsonSerializer
 

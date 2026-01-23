@@ -2,10 +2,9 @@ import logging
 from abc import ABC
 from typing import Any, Callable, List, Optional, Union
 
-from sqlalchemy import URL
-
 from gptdb.component import BaseComponent, ComponentType, SystemApp
 from gptdb.storage.metadata import DatabaseManager
+from sqlalchemy import URL
 
 logger = logging.getLogger(__name__)
 

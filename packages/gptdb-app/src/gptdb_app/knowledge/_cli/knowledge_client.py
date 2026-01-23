@@ -5,8 +5,6 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from urllib.parse import urljoin
 
 import requests
-from prettytable import PrettyTable
-
 from gptdb.rag.knowledge.base import KnowledgeType
 from gptdb_app.knowledge.request.request import (
     ChunkQueryRequest,
@@ -17,6 +15,7 @@ from gptdb_app.knowledge.request.request import (
     KnowledgeSpaceRequest,
 )
 from gptdb_app.openapi.api_view_model import Result
+from prettytable import PrettyTable
 
 HTTP_HEADERS = {"Content-Type": "application/json"}
 

@@ -1,5 +1,4 @@
 import pytest
-
 from gptdb.core.awel.operators.common_operator import MapOperator
 
 from ..base import IOField, Parameter, ResourceMetadata, ViewMetadata, register_resource

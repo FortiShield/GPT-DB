@@ -6,8 +6,6 @@ from dataclasses import dataclass, field
 from typing import Any, Dict, Iterable, List, Optional, Tuple, Type
 
 import sqlparse
-from sqlalchemy import MetaData, text
-
 from gptdb.core.awel.flow import (
     TAGS_ORDER_HIGH,
     ResourceCategory,
@@ -17,6 +15,7 @@ from gptdb.datasource.parameter import BaseDatasourceParameters
 from gptdb.datasource.rdbms.base import RDBMSConnector
 from gptdb.util.i18n_utils import _
 from gptdb_ext.datasource.schema import DBType
+from sqlalchemy import MetaData, text
 
 logger = logging.getLogger(__name__)
 

@@ -3,11 +3,10 @@ import logging
 import os
 import sys
 
-from typing_extensions import Annotated, Doc
-
 from gptdb.agent import AgentContext, AgentMemory, LLMConfig, UserProxyAgent
 from gptdb.agent.expand.tool_assistant_agent import ToolAssistantAgent
 from gptdb.agent.resource import ToolPack, tool
+from typing_extensions import Annotated, Doc
 
 logging.basicConfig(
     stream=sys.stdout,

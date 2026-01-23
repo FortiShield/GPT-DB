@@ -1,9 +1,12 @@
 import threading
-from typing import Optional, Any, Dict, cast, Tuple, List
-from sqlalchemy import text
+from typing import Any, Dict, List, Optional, Tuple, cast
+
 import pytest
 from gptdb_ext.datasource.rdbms.conn_sqlite import SQLiteConnector
-from gptdb_serve.evaluate.service.fetchdata.benchmark_data_manager import BenchmarkDataManager
+from gptdb_serve.evaluate.service.fetchdata.benchmark_data_manager import (
+    BenchmarkDataManager,
+)
+from sqlalchemy import text
 
 
 class QueryTimeoutError(Exception):

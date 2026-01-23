@@ -6,7 +6,6 @@ from enum import Enum
 from typing import Any, Dict, List, Optional, Tuple, Type, Union
 
 from bs4 import BeautifulSoup
-
 from gptdb.core import Document
 from gptdb.rag.text_splitter.text_splitter import (
     MarkdownHeaderTextSplitter,

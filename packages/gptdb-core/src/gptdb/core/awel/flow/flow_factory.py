@@ -7,8 +7,6 @@ from contextlib import suppress
 from enum import Enum
 from typing import Any, Callable, Dict, List, Literal, Optional, Type, Union, cast
 
-from typing_extensions import Annotated
-
 from gptdb._private.pydantic import (
     BaseModel,
     ConfigDict,
@@ -21,6 +19,7 @@ from gptdb._private.pydantic import (
 from gptdb.configs import VARIABLES_SCOPE_FLOW_PRIVATE
 from gptdb.core.awel.dag.base import DAG, DAGNode
 from gptdb.core.awel.dag.dag_manager import DAGMetadata
+from typing_extensions import Annotated
 
 from .base import (
     OperatorType,

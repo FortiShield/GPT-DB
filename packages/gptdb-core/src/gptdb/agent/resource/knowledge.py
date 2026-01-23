@@ -4,7 +4,6 @@ import dataclasses
 from typing import TYPE_CHECKING, Any, Dict, List, Optional, Tuple, Type
 
 import cachetools
-
 from gptdb._private.config import Config
 from gptdb.core import Chunk
 from gptdb.rag.embedding.embedding_factory import RerankEmbeddingFactory

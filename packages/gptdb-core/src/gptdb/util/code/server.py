@@ -3,9 +3,8 @@ import logging
 from enum import Enum, auto
 from typing import Dict, Optional, cast
 
-from lyric import CodeResult, DefaultLyricDriver, PyTaskResourceConfig
-
 from gptdb.component import BaseComponent, SystemApp
+from lyric import CodeResult, DefaultLyricDriver, PyTaskResourceConfig
 
 logger = logging.getLogger(__name__)
 

@@ -12,7 +12,6 @@ from typing import Any, BinaryIO, Dict, List, Optional, Tuple
 from urllib.parse import parse_qs, urlencode, urlparse
 
 import requests
-
 from gptdb.component import BaseComponent, ComponentType, SystemApp
 from gptdb.util.tracer import root_tracer, trace
 

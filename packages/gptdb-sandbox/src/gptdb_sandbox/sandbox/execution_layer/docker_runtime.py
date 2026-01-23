@@ -11,11 +11,6 @@ import tempfile
 import time
 from typing import Any, Dict, List, Optional
 
-try:
-    import docker
-except ImportError:
-    docker = None
-
 from ..config import LANGUAGE_IMAGES, get_command_by_language
 from ..display_layer.display_layer import DisplayResult
 from ..utils_function.logger import print_log
@@ -26,6 +21,12 @@ from .base import (
     SandboxSession,
     SessionConfig,
 )
+
+try:
+    import docker
+except ImportError:
+    docker = None
+
 
 
 class DockerSandboxSession(SandboxSession):

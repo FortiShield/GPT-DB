@@ -4,7 +4,6 @@ import logging
 import os
 
 import requests
-
 from gptdb._private.config import Config
 from gptdb.util.speech.base import VoiceBase
 

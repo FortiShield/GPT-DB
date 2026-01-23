@@ -6,8 +6,6 @@ Implement the cache storage using rocksdb.
 import logging
 from typing import Optional
 
-from rocksdict import Options, Rdict
-
 from gptdb.core.interface.cache import (
     CacheConfig,
     CacheKey,
@@ -16,6 +14,7 @@ from gptdb.core.interface.cache import (
     RetrievalPolicy,
     V,
 )
+from rocksdict import Options, Rdict
 
 from ..base import CacheStorage, StorageItem
 

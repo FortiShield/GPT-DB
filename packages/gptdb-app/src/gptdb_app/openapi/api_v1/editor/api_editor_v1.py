@@ -5,7 +5,6 @@ import time
 from typing import Dict, List, Tuple
 
 from fastapi import APIRouter, Body, Depends
-
 from gptdb._private.config import Config
 from gptdb.core.interface.message import OnceConversation
 from gptdb_app.openapi.api_v1.editor._chat_history.chat_hisotry_factory import (

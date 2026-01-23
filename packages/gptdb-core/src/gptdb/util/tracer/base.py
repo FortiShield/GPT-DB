@@ -314,9 +314,8 @@ def _clean_for_json(data: Optional[str, Any] = None):
 
 
 def _parse_span_id(body: Any) -> Optional[str]:
-    from starlette.requests import Request
-
     from gptdb._private.pydantic import BaseModel, model_to_dict
+    from starlette.requests import Request
 
     span_id: Optional[str] = None
     if isinstance(body, Request):

@@ -11,7 +11,7 @@ from gptdb.util.i18n_utils import _
 
 AIMLAPI_HEADERS = {
     "HTTP-Referer": "https://github.com/khulnasoft/GPT-DB",
-    "X-Title": "DB GPT",
+    "X-Title": "GPT DB",
 }
 
 

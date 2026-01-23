@@ -33,7 +33,7 @@ Return:
 {{"category": "Two Hop Entity Search", "rewritten_question": "Query all entities that have a two hop path between them and the entity named Bob, both entities should have a work for relation with the middle entity.", "entities": ["Bob"], "relations": ["work for"]}}
 Question: Introduce TuGraph and GPT-DB separately.
 Return:
-{{"category": "Freestyle Question", "rewritten_question": "Query the entity named TuGraph and the entity named GPT-DB, then return two-hop sub-graphs centered on them.", "entities": ["TuGraph", "GPTDB"], "relations": []}}
+{{"category": "Freestyle Question", "rewritten_question": "Query the entity named TuGraph and the entity named GPT-DB, then return two-hop sub-graphs centered on them.", "entities": ["TuGraph", "gptdb"], "relations": []}}
 ---------------------
 Text: {text}
 Return:

@@ -1,7 +1,5 @@
 import pytest
 import pytest_asyncio
-from httpx import ASGITransport, AsyncClient
-
 from gptdb.component import SystemApp
 from gptdb.model.cluster.apiserver.api import (
     ModelList,
@@ -14,6 +12,7 @@ from gptdb.model.parameter import ModelAPIServerParameters
 from gptdb.util.fastapi import create_app
 from gptdb.util.openai_utils import chat_completion, chat_completion_stream
 from gptdb.util.utils import LoggingParameters
+from httpx import ASGITransport, AsyncClient
 
 app = create_app()
 # app.add_middleware(

@@ -8,7 +8,6 @@ import uuid
 from typing import Any, AsyncIterator, Callable, Dict, Tuple, cast
 
 import click
-
 from gptdb.component import SystemApp
 from gptdb.core.awel import DAG, BaseOperator, DAGVar
 from gptdb.core.awel.dag.dag_manager import DAGMetadata, _parse_metadata

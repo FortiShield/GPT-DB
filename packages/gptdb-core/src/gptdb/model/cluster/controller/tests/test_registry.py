@@ -2,7 +2,6 @@ import asyncio
 from datetime import datetime, timedelta
 
 import pytest
-
 from gptdb.model.base import ModelInstance
 from gptdb.model.cluster.registry import EmbeddedModelRegistry
 

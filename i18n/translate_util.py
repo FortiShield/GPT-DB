@@ -186,7 +186,7 @@ class ModuleInfo(NamedTuple):
 
 def find_modules(root_path: str = None) -> List[ModuleInfo]:
     """
-    Find all DBGpt modules, including:
+    Find all GPTdb modules, including:
     1. First-level submodules (directories with __init__.py)
     2. Python files directly under base module directory
 
@@ -632,6 +632,7 @@ if __name__ == "__main__":
         "fr": "Français",
         "ko": "한국어",
         "ru": "русский",
+        "bn_BD": "বাংলা",
     }
 
     parser = argparse.ArgumentParser()
