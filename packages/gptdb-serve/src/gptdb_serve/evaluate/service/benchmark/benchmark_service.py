@@ -485,7 +485,8 @@ class BenchmarkService(
 
     def _get_database_dialect(self) -> str | None:
         try:
-            db_connector = get_benchmark_manager().get_connector()
+            manager = get_benchmark_manager(self._system_app)
+            db_connector = manager.get_connector()
             if db_connector and hasattr(db_connector, "dialect"):
                 return db_connector.dialect
         except Exception as e:

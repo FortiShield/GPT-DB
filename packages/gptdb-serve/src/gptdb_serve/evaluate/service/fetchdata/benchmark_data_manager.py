@@ -902,15 +902,6 @@ class BenchmarkDataManager(BaseComponent):
                 for db_path in sqlite_files:
                     src_alias = f"src_db_{uuid.uuid4().hex[:8]}"
                     try:
-                        try:
-                            cursor.execute("PRAGMA database_list")
-                            attached_dbs = cursor.fetchall()
-                            for _, name, _ in attached_dbs:
-                                if name not in ("main", "temp"):
-                                    cursor.execute(f"DETACH DATABASE {name}")
-                        except Exception as cleanup_err:
-                            logger.warning(f"Cleanup warning: {cleanup_err}")
-
                         cursor.execute(f"ATTACH DATABASE ? AS {src_alias}", (db_path,))
 
                         cursor.execute(

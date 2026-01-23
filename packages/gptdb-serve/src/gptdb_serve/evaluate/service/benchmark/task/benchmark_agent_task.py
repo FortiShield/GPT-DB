@@ -7,6 +7,7 @@ from dataclasses import asdict
 from typing import Any, Dict, Optional, Union
 
 import aiohttp
+from jsonpath_ng import parse as jsonpath_parse
 from gptdb_serve.evaluate.service.benchmark.models import (
     AgentApiConfig,
     AgentCompletionRequest,
@@ -38,32 +39,17 @@ class ResponseParser:
         if not json_path:
             return response_data
 
-        # Remove leading $. if present
-        path = json_path.lstrip("$.")
-
-        # Split path by dots and brackets
-        parts = path.replace("[", ".").replace("]", "").split(".")
-
-        current = response_data
-        for part in parts:
-            if not part:
-                continue
-
-            try:
-                if isinstance(current, dict):
-                    current = current.get(part)
-                elif isinstance(current, list):
-                    index = int(part)
-                    current = current[index]
-                else:
-                    return None
-
-                if current is None:
-                    return None
-            except (KeyError, IndexError, ValueError, TypeError):
+        try:
+            jsonpath_expr = jsonpath_parse(json_path)
+            matches = jsonpath_expr.find(response_data)
+            if matches:
+                # Return the value of the first match
+                return matches[0].value
+            else:
                 return None
-
-        return current
+        except Exception as e:
+            logger.warning(f"Error parsing JSONPath '{json_path}': {e}")
+            return None
 
     @staticmethod
     def parse_direct(response_data: Any) -> str:

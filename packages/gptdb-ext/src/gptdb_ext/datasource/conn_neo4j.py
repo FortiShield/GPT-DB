@@ -143,9 +143,9 @@ class Neo4jConnector(BaseConnector):
         try:
             databases = self.get_database_names()
             return graph_name in databases
-        except Exception:
-            # If we can connect and run queries, the database exists
-            return True
+        except Exception as e:
+            # If we can't verify, assume it doesn't exist or is inaccessible.
+            return False
 
     def delete_graph(self, graph_name: str) -> None:
         """Delete all data from the current database.
@@ -153,10 +153,9 @@ class Neo4jConnector(BaseConnector):
         Note: This deletes all nodes and relationships, not the database itself.
         """
         with self._driver.session(database=self._database) as session:
-            # Delete all relationships first
-            session.run("MATCH ()-[r]->() DELETE r")
-            # Then delete all nodes
-            session.run("MATCH (n) DELETE n")
+            # Use DETACH DELETE to remove nodes and their relationships in one go.
+            # This is generally more performant for large graphs.
+            session.run("MATCH (n) DETACH DELETE n")
 
     def get_system_info(self) -> Dict:
         """Get Neo4j system information."""

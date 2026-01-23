@@ -19,7 +19,7 @@ from ..base import (
 from .chatgpt import OpenAICompatibleDeployModelParameters, OpenAILLMClient
 
 AIMLAPI_HEADERS = {
-    "HTTP-Referer": "https://github.com/khulnasoft/GPT-DB",
+    "HTTP-Referer": "https://github.com/khulnasoft-bot/GPT-DB",
     "X-Title": "GPT DB",
 }
 

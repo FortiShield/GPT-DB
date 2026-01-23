@@ -93,7 +93,7 @@ const useChat = ({ queryAgentURL = '/api/v1/chat/completions', app_code }: Props
                 message = parsedData.choices?.[0]?.message?.content;
               }
             } catch {
-              message.replaceAll('\\n', '\n');
+              message = message.replaceAll('\\n', '\n');
             }
             if (typeof message === 'string') {
               if (needReplaceNewline) {
