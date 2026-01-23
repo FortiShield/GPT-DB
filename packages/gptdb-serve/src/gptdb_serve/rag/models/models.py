@@ -1,12 +1,11 @@
 from datetime import datetime
 from typing import Any, Dict, Union
 
-from sqlalchemy import Column, DateTime, Integer, String, Text
-
 from gptdb._private.pydantic import model_to_dict
 from gptdb.storage.metadata import BaseDao, Model
 from gptdb_app.knowledge.request.request import KnowledgeSpaceRequest
 from gptdb_serve.rag.api.schemas import SpaceServeRequest, SpaceServeResponse
+from sqlalchemy import Column, DateTime, Integer, String, Text
 
 
 class KnowledgeSpaceEntity(Model):

@@ -1,9 +1,8 @@
 from unittest.mock import MagicMock, patch
 
 import pytest
-from sqlalchemy.exc import OperationalError, SQLAlchemyError
-
 from gptdb_app.base import _create_mysql_database
+from sqlalchemy.exc import OperationalError, SQLAlchemyError
 
 
 @patch("sqlalchemy.create_engine")

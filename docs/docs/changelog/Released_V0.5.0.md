@@ -24,7 +24,7 @@ In its early releases, the GPT-DB project offered six default use cases, namely:
 These scenarios were designed to satisfy basic and simple use requirements. However, for large-scale production deployment, particularly when dealing with complex business scenarios, it becomes necessary to develop custom scenarios tailored to specific business conditions. This presents significant challenges in terms of flexibility and development complexity.
 
 
-To further enhance the usability and flexibility of the business framework, we have built upon our existing features, including the multi-model management (SMMF), knowledge base, Agents, data sources, plugins, and Prompts. We have abstracted the capabilities of intelligent agent orchestration (AWEL) and application construction. Additionally, to facilitate application management and distribution, we have introduced the [gptdbs](https://github.com/khulnasoft/gptdbs) subproject, which specifically manages the construction of native intelligent data applications, AWEL common operators, AWEL generic workflow templates, and Agents on top of GPT-DB.
+To further enhance the usability and flexibility of the business framework, we have built upon our existing features, including the multi-model management (SMMF), knowledge base, Agents, data sources, plugins, and Prompts. We have abstracted the capabilities of intelligent agent orchestration (AWEL) and application construction. Additionally, to facilitate application management and distribution, we have introduced the [gptdbs](https://github.com/khulnasoft-bot/gptdbs) subproject, which specifically manages the construction of native intelligent data applications, AWEL common operators, AWEL generic workflow templates, and Agents on top of GPT-DB.
 
 This version update will not affect the usage of the previously established six scenarios. However, with subsequent iterations, these default scenarios will gradually be rewritten as Data Apps. We also plan to incorporate them into the `gptdbs` project as default applications, making them readily available for installation and use.
 
@@ -255,11 +255,11 @@ pip install -e ".[default]"
 ## Acknowledgments
 We would like to express our deepest gratitude to all the contributors who made this release possible!
 
-@Aralhi, @Aries-ckt, @JoanFM, @khulnasoft, @fangyinc, @Hzh_97, @junewgl, @lcxadml, @likenamehaojie, @xiuzhu9527 and @yhjun1026
+@Aralhi, @Aries-ckt, @JoanFM, @csunny, @fangyinc, @Hzh_97, @junewgl, @lcxadml, @likenamehaojie, @xiuzhu9527 and @yhjun1026
 
 ## Appendix 
 - GPT-DB framework: https://github.com/khulnasoft 
-- Text2SQL fine tuning: https://github.com/khulnasoft/GPT-DB-Hub 
-- GPT-DB-Web : https://github.com/khulnasoft/GPT-DB-Web 
+- Text2SQL fine tuning: https://github.com/khulnasoft-bot/GPT-DB-Hub 
+- GPT-DB-Web : https://github.com/khulnasoft-bot/GPT-DB-Web 
 - official English documentation: http://docs.gptdb.site/docs/overview 
-- official Chinese documentation: https://www.yuque.com/eosphoros/gptdb-docs/bex30nsv60ru0fmx
+- official Chinese documentation: https://www.yuque.com/khulnasoft/gptdb-docs/bex30nsv60ru0fmx

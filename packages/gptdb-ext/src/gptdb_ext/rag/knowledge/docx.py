@@ -5,7 +5,6 @@ from typing import Any, Dict, List, Optional, Union
 import docx
 from docx.opc.oxml import parse_xml
 from docx.opc.pkgreader import _SerializedRelationship, _SerializedRelationships
-
 from gptdb.core import Document
 from gptdb.rag.knowledge.base import (
     ChunkStrategy,

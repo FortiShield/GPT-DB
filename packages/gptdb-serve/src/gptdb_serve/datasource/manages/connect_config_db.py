@@ -5,6 +5,11 @@ import logging
 from datetime import datetime
 from typing import Any, Dict, Optional, Union
 
+from gptdb.storage.metadata import BaseDao, Model
+from gptdb_serve.datasource.api.schemas import (
+    DatasourceServeRequest,
+    DatasourceServeResponse,
+)
 from sqlalchemy import (
     Column,
     DateTime,
@@ -14,12 +19,6 @@ from sqlalchemy import (
     Text,
     UniqueConstraint,
     text,
-)
-
-from gptdb.storage.metadata import BaseDao, Model
-from gptdb_serve.datasource.api.schemas import (
-    DatasourceServeRequest,
-    DatasourceServeResponse,
 )
 
 logger = logging.getLogger(__name__)

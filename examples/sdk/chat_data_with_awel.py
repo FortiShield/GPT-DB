@@ -3,7 +3,6 @@ import json
 import shutil
 
 import pandas as pd
-
 from gptdb.configs.model_config import PILOT_PATH
 from gptdb.core import (
     ChatPromptTemplate,

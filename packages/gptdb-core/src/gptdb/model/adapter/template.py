@@ -125,7 +125,6 @@ def get_conv_template(name: str) -> ConversationAdapter:
         Conversation: The conversation template.
     """
     from fastchat.conversation import get_conv_template
-
     from gptdb.model.adapter.fschat_adapter import FschatConversationAdapter
 
     conv_template = get_conv_template(name)

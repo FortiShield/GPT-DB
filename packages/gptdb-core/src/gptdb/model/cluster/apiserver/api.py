@@ -16,7 +16,6 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
 from fastapi.security.http import HTTPAuthorizationCredentials, HTTPBearer
-
 from gptdb._private.pydantic import BaseModel, model_to_dict
 from gptdb.component import BaseComponent, ComponentType, SystemApp
 from gptdb.core import ModelOutput

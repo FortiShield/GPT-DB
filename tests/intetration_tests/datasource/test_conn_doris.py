@@ -10,7 +10,6 @@
 """
 
 import pytest
-
 from gptdb_ext.datasource.rdbms.conn_doris import DorisConnector
 
 _create_table_sql = """

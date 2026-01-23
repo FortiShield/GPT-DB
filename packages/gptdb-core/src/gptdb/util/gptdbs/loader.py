@@ -7,7 +7,6 @@ from typing import Any, Callable, Dict, List, Optional, Tuple, Type, TypeVar, ca
 
 import schedule
 import tomlkit
-
 from gptdb._private.pydantic import BaseModel, ConfigDict, Field, model_validator
 from gptdb.component import BaseComponent, SystemApp
 from gptdb.core.awel import DAG
@@ -411,7 +410,7 @@ def _flow_package_to_flow_panel(package: FlowPackage) -> FlowPanel:
 class GPTDBsLoader(BaseComponent):
     """The loader of the gptdbs packages"""
 
-    name: str = "gptdb_gptdbs_loader"
+    name: str = "gptgpt_dbdbs_loader"
 
     def __init__(
         self,

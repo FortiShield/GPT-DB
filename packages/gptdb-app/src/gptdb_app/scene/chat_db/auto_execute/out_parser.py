@@ -6,7 +6,6 @@ from typing import Dict, NamedTuple
 import numpy as np
 import pandas as pd
 import sqlparse
-
 from gptdb._private.config import Config
 from gptdb.core.interface.output_parser import BaseOutputParser
 from gptdb.util.json_utils import serialize

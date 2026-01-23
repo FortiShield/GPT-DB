@@ -1,11 +1,10 @@
 import os
 from typing import Dict
 
+from gptdb.core import ModelOutput
 from vllm import AsyncLLMEngine
 from vllm.sampling_params import SamplingParams
 from vllm.utils import random_uuid
-
-from gptdb.core import ModelOutput
 
 from ...utils.llm_metrics import LLMPerformanceMonitor
 from ...utils.parse_utils import (
@@ -14,7 +13,7 @@ from ...utils.parse_utils import (
     parse_chat_message,
 )
 
-_IS_BENCHMARK = os.getenv("DB_GPT_MODEL_BENCHMARK", "False").lower() == "true"
+_IS_BENCHMARK = os.getenv("GPT_DB_MODEL_BENCHMARK", "False").lower() == "true"
 
 
 async def generate_stream(

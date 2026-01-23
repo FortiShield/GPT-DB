@@ -1,6 +1,6 @@
 [project]
 name = "gptdb-mono"
-version = "0.7.4"
+version = "0.1.0"
 description = """GPT-DB is an experimental open-source project that uses localized GPT \
 large models to interact with your data and environment. With this solution, you can be\
  assured that there is no risk of data leakage, and your data is 100% private and secure.\
@@ -41,7 +41,8 @@ members = [
 
 [tool.uv]
 managed = true
-dev-dependencies = [
+[tool.uv.dependency-groups.dev]
+dependencies = [
     "pip",
     "tomli>=2.0.2",
     "tomli-w>=1.1.0",

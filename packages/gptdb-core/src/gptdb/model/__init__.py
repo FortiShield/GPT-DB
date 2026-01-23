@@ -1,10 +1,11 @@
+from .adapter.auto_client import AutoLLMClient  # noqa: F401
+
 try:
     from gptdb.model.cluster.client import DefaultLLMClient, RemoteLLMClient
 except ImportError:
     DefaultLLMClient = None
     RemoteLLMClient = None
 
-from .adapter.auto_client import AutoLLMClient  # noqa: F401
 
 _exports = [
     "AutoLLMClient",

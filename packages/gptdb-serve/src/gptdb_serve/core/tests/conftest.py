@@ -4,12 +4,11 @@ from unittest.mock import MagicMock
 import pytest
 import pytest_asyncio
 from fastapi.middleware.cors import CORSMiddleware
-from httpx import ASGITransport, AsyncClient
-
 from gptdb.component import SystemApp
 from gptdb.util import AppConfig
 from gptdb.util.fastapi import create_app
 from gptdb_serve.core import BaseServeConfig
+from httpx import ASGITransport, AsyncClient
 
 
 def create_system_app(param: Dict) -> SystemApp:

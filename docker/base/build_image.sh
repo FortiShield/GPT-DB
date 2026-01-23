@@ -48,7 +48,7 @@ PIP_INDEX_URL="https://pypi.tuna.tsinghua.edu.cn/simple"
 LANGUAGE="en"
 LOAD_EXAMPLES="true"
 BUILD_NETWORK=""
-DB_GPT_INSTALL_MODE="default"
+GPT_DB_INSTALL_MODE="default"
 EXTRAS=""
 ADDITIONAL_EXTRAS=""
 DOCKERFILE="Dockerfile"
@@ -169,7 +169,7 @@ while [[ $# -gt 0 ]]; do
         shift # past value
         ;;
         --install-mode)
-        DB_GPT_INSTALL_MODE="$2"
+        GPT_DB_INSTALL_MODE="$2"
         shift # past argument
         shift # past value
         ;;
@@ -224,9 +224,9 @@ while [[ $# -gt 0 ]]; do
 done
 
 # Configure based on the installation mode
-if [ -n "$DB_GPT_INSTALL_MODE" ]; then
+if [ -n "$GPT_DB_INSTALL_MODE" ]; then
     # Check if it is a valid installation mode and set the corresponding variables
-    case "$DB_GPT_INSTALL_MODE" in
+    case "$GPT_DB_INSTALL_MODE" in
         default)
             # If the user has not explicitly specified BASE_IMAGE, use the default value for this mode
             if [ "$BASE_IMAGE" == "$CUDA_BASE_IMAGE" ]; then
@@ -286,13 +286,13 @@ if [ -n "$DB_GPT_INSTALL_MODE" ]; then
             fi
             ;;
         *)
-            echo "Warning: Unknown install mode '$DB_GPT_INSTALL_MODE'. Using defaults."
+            echo "Warning: Unknown install mode '$GPT_DB_INSTALL_MODE'. Using defaults."
             ;;
     esac
 
     # Set image name suffix to the installation mode
-    if [ "$DB_GPT_INSTALL_MODE" != "default" ]; then
-        IMAGE_NAME="$IMAGE_NAME-$DB_GPT_INSTALL_MODE"
+    if [ "$GPT_DB_INSTALL_MODE" != "default" ]; then
+        IMAGE_NAME="$IMAGE_NAME-$GPT_DB_INSTALL_MODE"
     fi
 fi
 
@@ -327,7 +327,7 @@ fi
 echo "Begin build docker image"
 echo "Base image: ${BASE_IMAGE}"
 echo "Target image name: ${IMAGE_NAME}"
-echo "Install mode: ${DB_GPT_INSTALL_MODE}"
+echo "Install mode: ${GPT_DB_INSTALL_MODE}"
 echo "Extras: ${EXTRAS}"
 if [ -n "$ADDITIONAL_EXTRAS" ]; then
     echo "Additional Extras: ${ADDITIONAL_EXTRAS}"

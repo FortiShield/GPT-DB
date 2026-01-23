@@ -7,7 +7,6 @@ from datetime import datetime, timedelta
 from unittest.mock import patch
 
 import pytest
-
 from gptdb.util.tracer import (
     FileSpanStorage,
     Span,

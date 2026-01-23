@@ -6,9 +6,8 @@ Supports more trigger types, such as RequestHttpTrigger.
 from enum import Enum
 from typing import Dict, List, Optional, Type, Union
 
-from starlette.requests import Request
-
 from gptdb.util.i18n_utils import _
+from starlette.requests import Request
 
 from ..flow import IOField, OperatorCategory, OperatorType, Parameter, ViewMetadata
 from ..operators.common_operator import MapOperator

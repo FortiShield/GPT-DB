@@ -4,7 +4,6 @@ import os
 from typing import Callable, List, Optional, Type
 
 import click
-
 from gptdb.configs.model_config import LOGDIR
 from gptdb.model.base import WorkerApplyType
 from gptdb.model.parameter import (
@@ -71,9 +70,8 @@ def model_cli_group(address: str):
 )
 def list(model_name: str, model_type: str):
     """List model instances"""
-    from prettytable import PrettyTable
-
     from gptdb.model.cluster import ModelRegistryClient
+    from prettytable import PrettyTable
 
     loop = get_or_create_event_loop()
     registry = ModelRegistryClient(MODEL_CONTROLLER_ADDRESS)

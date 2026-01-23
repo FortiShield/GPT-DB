@@ -6,15 +6,15 @@ from typing import Any, Dict, List, Optional
 
 
 @dataclass
-class DbGptsMessage:
+class GptDbsMessage:
     sender: str
     receiver: str
     content: str
     action_report: str
 
     @staticmethod
-    def from_dict(d: Dict[str, Any]) -> DbGptsMessage:
-        return DbGptsMessage(
+    def from_dict(d: Dict[str, Any]) -> GptDbsMessage:
+        return GptDbsMessage(
             sender=d["sender"],
             receiver=d["receiver"],
             content=d["content"],
@@ -27,7 +27,7 @@ class DbGptsMessage:
 
 
 @dataclass
-class DbGptsTaskStep:
+class GptDbsTaskStep:
     task_num: str
     task_content: str
     state: str
@@ -36,8 +36,8 @@ class DbGptsTaskStep:
     model_name: str
 
     @staticmethod
-    def from_dict(d: Dict[str, Any]) -> DbGptsTaskStep:
-        return DbGptsTaskStep(
+    def from_dict(d: Dict[str, Any]) -> GptDbsTaskStep:
+        return GptDbsTaskStep(
             task_num=d["task_num"],
             task_content=d["task_content"],
             state=d["state"],
@@ -51,17 +51,17 @@ class DbGptsTaskStep:
 
 
 @dataclass
-class DbGptsCompletion:
+class GptDbsCompletion:
     conv_id: str
-    task_steps: Optional[List[DbGptsTaskStep]]
-    messages: Optional[List[DbGptsMessage]]
+    task_steps: Optional[List[GptDbsTaskStep]]
+    messages: Optional[List[GptDbsMessage]]
 
     @staticmethod
-    def from_dict(d: Dict[str, Any]) -> DbGptsCompletion:
-        return DbGptsCompletion(
+    def from_dict(d: Dict[str, Any]) -> GptDbsCompletion:
+        return GptDbsCompletion(
             conv_id=d.get("conv_id"),
-            task_steps=DbGptsTaskStep.from_dict(d["task_steps"]),
-            messages=DbGptsMessage.from_dict(d["messages"]),
+            task_steps=GptDbsTaskStep.from_dict(d["task_steps"]),
+            messages=GptDbsMessage.from_dict(d["messages"]),
         )
 
     def to_dict(self) -> Dict[str, Any]:

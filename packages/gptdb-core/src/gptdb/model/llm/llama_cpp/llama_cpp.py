@@ -8,7 +8,6 @@ from typing import Dict, Optional
 
 import llama_cpp
 import torch
-
 from gptdb.core import ModelOutput
 from gptdb.model.adapter.llama_cpp_py_adapter import LlamaCppModelParameters
 from gptdb.model.utils.llm_utils import parse_model_request

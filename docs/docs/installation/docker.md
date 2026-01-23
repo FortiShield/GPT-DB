@@ -16,7 +16,7 @@ You can **choose any one** during actual use.
 
 In this deployment, you don't need an GPU environment.
 
-1. Pull from the official image repository, [Eosphoros AI Docker Hub](https://hub.docker.com/u/khulnasoft)
+1. Pull from the official image repository, [KhulnaSoft AI Docker Hub](https://hub.docker.com/u/khulnasoft)
 
 ```bash
 docker pull khulnasoft/gptdb-openai:latest

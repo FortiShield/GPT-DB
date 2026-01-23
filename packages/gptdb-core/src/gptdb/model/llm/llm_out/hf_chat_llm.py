@@ -2,9 +2,8 @@ import logging
 from threading import Thread
 
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
-
 from gptdb.core import ModelOutput
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from ...utils.hf_stream_utils import PerformanceMonitoringStreamer
 from ...utils.parse_utils import (

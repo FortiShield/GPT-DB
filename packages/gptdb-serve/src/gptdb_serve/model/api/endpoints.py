@@ -4,7 +4,6 @@ from typing import List, Optional
 
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security.http import HTTPAuthorizationCredentials, HTTPBearer
-
 from gptdb.component import SystemApp
 from gptdb.model.cluster import (
     WorkerManager,

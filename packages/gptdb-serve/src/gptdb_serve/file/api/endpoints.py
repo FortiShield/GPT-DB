@@ -6,10 +6,9 @@ from urllib.parse import quote
 
 from fastapi import APIRouter, Depends, HTTPException, Query, UploadFile
 from fastapi.security.http import HTTPAuthorizationCredentials, HTTPBearer
-from starlette.responses import StreamingResponse
-
 from gptdb.component import SystemApp
 from gptdb_serve.core import Result, blocking_func_to_async
+from starlette.responses import StreamingResponse
 
 from ..config import SERVE_SERVICE_COMPONENT_NAME, ServeConfig
 from ..service.service import Service

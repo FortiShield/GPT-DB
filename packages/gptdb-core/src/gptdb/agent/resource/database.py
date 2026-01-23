@@ -6,7 +6,6 @@ from concurrent.futures import Executor, ThreadPoolExecutor
 from typing import Any, Dict, Generic, List, Optional, Tuple, Union
 
 import cachetools
-
 from gptdb.datasource.rdbms.base import RDBMSConnector
 from gptdb.util.cache_utils import cached
 from gptdb.util.executor_utils import blocking_func_to_async

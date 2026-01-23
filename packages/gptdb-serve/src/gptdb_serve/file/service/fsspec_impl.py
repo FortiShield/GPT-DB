@@ -6,7 +6,6 @@ from urllib.parse import urlparse
 
 from fsspec import AbstractFileSystem
 from fsspec.utils import stringify_path
-
 from gptdb.core.interface.file import (
     FileMetadata,
     FileStorageClient,

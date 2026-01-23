@@ -18,12 +18,11 @@ from typing import (
     cast,
 )
 
-from pydantic import field_validator
-
 from gptdb._private.pydantic import BaseModel, model_to_dict
 from gptdb.core import Chunk
 from gptdb.util.i18n_utils import _
 from gptdb.util.parameter_utils import BaseParameters, _get_parameter_descriptions
+from pydantic import field_validator
 
 P = TypeVar("P", bound="ResourceParameters")
 T = TypeVar("T", bound="Resource")

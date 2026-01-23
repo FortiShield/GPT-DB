@@ -2,7 +2,6 @@ from unittest.mock import AsyncMock, Mock
 
 import pytest
 from fastapi import HTTPException
-
 from gptdb.component import SystemApp
 from gptdb_serve.core.tests.conftest import (  # noqa: F401
     asystem_app,

@@ -1,6 +1,5 @@
 from fastapi import Request
 from fastapi.exceptions import RequestValidationError
-
 from gptdb_app.openapi.api_view_model import Result
 
 

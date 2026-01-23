@@ -1,9 +1,8 @@
 from dataclasses import dataclass
 from typing import Generic, List, Optional, TypeVar
 
-from pydantic import field_validator
-
 from gptdb._private.pydantic import BaseModel, ConfigDict, Field, model_to_dict
+from pydantic import field_validator
 
 T = TypeVar("T")
 
@@ -111,7 +110,7 @@ class MyPluginFilter(BaseModel):
 class PluginHubParam(BaseModel):
     channel: Optional[str] = Field("git", description="Plugin storage channel")
     url: Optional[str] = Field(
-        "https://github.com/khulnasoft/GPT-DB-Plugins.git",
+        "https://github.com/khulnasoft-bot/GPT-DB-Plugins.git",
         description="Plugin storage url",
     )
     branch: Optional[str] = Field(

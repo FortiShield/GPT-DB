@@ -1,6 +1,6 @@
 [project]
 name = "gptdb-serve"
-version = "0.7.4"
+version = "0.1.0"
 description = "Add your description here"
 authors = [
     { name = "Md Sulaiman", email = "dev.sulaiman@icloud.com" }
@@ -15,7 +15,7 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://github.com/khulnasoft/GPT-DB"
-Documentation = "http://docs.gptdb.cn/docs/overview"
+Documentation = "http://gpt.khulnasoft.com/docs/overview"
 Repository = "https://github.com/khulnasoft/GPT-DB.git"
 Issues = "https://github.com/khulnasoft/GPT-DB/issues"
 
@@ -25,7 +25,6 @@ build-backend = "hatchling.build"
 
 [tool.uv]
 managed = true
-dev-dependencies = []
 
 [project.optional-dependencies]
 libro = ["libro>=0.1.25"]

@@ -6,7 +6,6 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 import pandas as pd
-
 from gptdb.agent import AgentContext, AgentMemory, LLMConfig, UserProxyAgent
 from gptdb.agent.expand.actions.insert_action import Excel2TableAction
 from gptdb.agent.expand.data_scientist_agent import DataScientistAgent

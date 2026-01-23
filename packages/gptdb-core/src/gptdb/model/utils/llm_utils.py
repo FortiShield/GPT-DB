@@ -2,7 +2,6 @@ from pathlib import Path
 from typing import Any, Dict, List
 
 import cachetools
-
 from gptdb.core import ModelRequest, ModelRequestContext
 from gptdb.model.base import SupportedModel
 from gptdb.util.annotations import Deprecated

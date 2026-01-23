@@ -3,9 +3,8 @@ import json
 from typing import Dict, List, Optional
 
 import pytest
-from typing_extensions import Annotated, Doc
-
 from gptdb._private.pydantic import BaseModel, Field
+from typing_extensions import Annotated, Doc
 
 from ..base import BaseTool, FunctionTool, ToolParameter, tool
 

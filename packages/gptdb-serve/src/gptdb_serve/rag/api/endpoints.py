@@ -10,7 +10,6 @@ from fastapi import (
     UploadFile,
 )
 from fastapi.security.http import HTTPAuthorizationCredentials, HTTPBearer
-
 from gptdb.component import SystemApp
 from gptdb.util import PaginationResult
 from gptdb_ext.rag.chunk_manager import ChunkParameters

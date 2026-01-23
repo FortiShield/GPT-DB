@@ -50,10 +50,10 @@ jobs:
       - name: Update version
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            export DB_GPT_VERSION=${{ inputs.version }} make package
-            echo "Updating version in all files to $DB_GPT_VERSION"
+            export GPT_DB_VERSION=${{ inputs.version }} make package
+            echo "Updating version in all files to $GPT_DB_VERSION"
             cd scripts
-            uv run update_version_all.py $DB_GPT_VERSION -y
+            uv run update_version_all.py $GPT_DB_VERSION -y
             cd ..
           else
             echo "Prepping package for release"

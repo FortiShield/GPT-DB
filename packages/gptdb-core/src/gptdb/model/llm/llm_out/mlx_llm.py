@@ -1,11 +1,10 @@
 from typing import Dict
 
 import mlx.nn as nn
+from gptdb.core import ModelOutput
 from mlx_lm import stream_generate
 from mlx_lm.sample_utils import make_sampler
 from mlx_lm.tokenizer_utils import TokenizerWrapper
-
-from gptdb.core import ModelOutput
 
 from ...utils.llm_metrics import LLMPerformanceMonitor
 from ...utils.parse_utils import (

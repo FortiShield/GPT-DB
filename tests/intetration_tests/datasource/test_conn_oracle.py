@@ -20,7 +20,6 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 import pytest
 from gptdb_ext.datasource.rdbms.conn_oracle import OracleConnector
 
-
 _create_table_sql = """
 CREATE TABLE test (
     id NUMBER(11) NULL

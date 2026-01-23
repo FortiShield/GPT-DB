@@ -13,8 +13,8 @@ from .embedding import (  # noqa: F401
 from .full_text import FullTextStorageOperator  # noqa: F401
 from .knowledge import ChunksToStringOperator, KnowledgeOperator  # noqa: F401
 from .knowledge_graph import KnowledgeGraphOperator  # noqa: F401
+from .process_branch import KnowledgeProcessBranchOperator  # noqa: F401
 from .process_branch import (
-    KnowledgeProcessBranchOperator,  # noqa: F401
     KnowledgeProcessJoinOperator,
 )
 from .summary import SummaryAssemblerOperator  # noqa: F401

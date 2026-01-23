@@ -1,64 +1,74 @@
 [project]
 name = "gptdb-app"
-version = "0.7.4"
-description = "Add your description here"
+version = "0.1.0"
+description = "GPT-DB application runtime and orchestration layer"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+
 authors = [
     { name = "Md Sulaiman", email = "dev.sulaiman@icloud.com" }
 ]
-license = "MIT"
-readme = "README.md"
-requires-python = ">= 3.10"
 
 dependencies = [
-    "gptdb-acc-auto",
     "gptdb",
     "gptdb-ext",
     "gptdb-serve",
     "gptdb-client",
+
+    # accelerator / automation (verify PyPI availability)
+    "gptdb-acc-auto",
+
     "aiofiles",
     "pyparsing",
 ]
 
+
 [project.urls]
 Homepage = "https://github.com/khulnasoft/GPT-DB"
-Documentation = "http://docs.gptdb.cn/docs/overview"
+Documentation = "https://gpt.khulnasoft.com/docs/overview"
 Repository = "https://github.com/khulnasoft/GPT-DB.git"
 Issues = "https://github.com/khulnasoft/GPT-DB/issues"
 
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
 
 [project.optional-dependencies]
 cache = [
     "rocksdict",
 ]
+
 observability = [
     "opentelemetry-api",
     "opentelemetry-sdk",
     "opentelemetry-exporter-otlp",
 ]
+
+# Full GPT-DB feature set
 base = [
-    "gptdb[client,cli,agent,simple_framework,framework,code]"
+    "gptdb[client,cli,agent,simple_framework,framework,code]",
 ]
+
+# Legacy / transitional tooling (planned removal)
 gptdbs = [
-    # For build gptdbs apps, we will be removed in the future.
     "build",
-    "poetry"
+    "poetry",
 ]
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 
 [tool.uv]
 managed = true
-dev-dependencies = []
+
+[tool.uv.dependency-groups.dev]
+dependencies = []
+
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/gptdb_app"]
 exclude = [
     "src/gptdb_app/**/tests",
-    "src/gptdb_app/**/tests/*",
-    "src/gptdb_app/tests",
-    "src/gptdb_app/tests/*",
     "src/gptdb_app/**/examples",
-    "src/gptdb_app/**/examples/*"
 ]
-

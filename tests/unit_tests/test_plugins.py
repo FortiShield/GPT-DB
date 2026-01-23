@@ -1,7 +1,6 @@
 import os
 
 import pytest
-
 from gptdb._private.config import Config
 from gptdb.plugins import (
     denylist_allowlist_check,

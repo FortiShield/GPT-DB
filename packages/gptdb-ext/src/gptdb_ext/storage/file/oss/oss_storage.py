@@ -9,9 +9,8 @@ import time
 from typing import BinaryIO, Callable, Dict, Optional, Union
 
 import oss2
-from oss2.credentials import EnvironmentVariableCredentialsProvider
-
 from gptdb.core.interface.file import FileMetadata, StorageBackend
+from oss2.credentials import EnvironmentVariableCredentialsProvider
 
 logger = logging.getLogger(__name__)
 

@@ -75,7 +75,7 @@ Options:
   --space_name TEXT         Your knowledge space name  [default: default]
   --vector_store_type TEXT  Vector store type.  [default: Chroma]
   --local_doc_path TEXT     Your document directory or document file path.
-                            [default: /Users/magic/workspace/github/eosphoros-
+                            [default: /Users/magic/workspace/github/khulnasoft-
                             ai/GPT-DB/pilot/datasets]
   --skip_wrong_doc          Skip wrong document.
   --overwrite               Overwrite existing document(they has same name).

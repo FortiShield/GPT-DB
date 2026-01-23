@@ -1,0 +1,8 @@
+/app/packages/gptdb-app/src
+/app/packages/gptdb-accelerator
+/app/packages/gptdb-accelerator/src
+/app/packages/gptdb-core/src
+/app/packages/gptdb-client/src
+/app/packages/gptdb-ext/src
+/app/packages/gptdb-serve/src
+/app/packages/gptdb-app/src

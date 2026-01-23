@@ -6,6 +6,8 @@ import logging
 from contextlib import contextmanager
 from typing import ClassVar, Dict, Generic, Iterator, Optional, Type, TypeVar, Union
 
+from gptdb.util.pagination_utils import PaginationResult
+from gptdb.util.string_utils import _to_str
 from sqlalchemy import URL, Engine, MetaData, create_engine, inspect, orm
 from sqlalchemy.orm import (
     DeclarativeMeta,
@@ -15,9 +17,6 @@ from sqlalchemy.orm import (
     sessionmaker,
 )
 from sqlalchemy.pool import QueuePool
-
-from gptdb.util.pagination_utils import PaginationResult
-from gptdb.util.string_utils import _to_str
 
 logger = logging.getLogger(__name__)
 T = TypeVar("T", bound="BaseModel")

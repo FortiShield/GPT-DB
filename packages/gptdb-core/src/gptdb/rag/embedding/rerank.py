@@ -7,7 +7,6 @@ from typing import Any, Dict, List, Optional, Type, cast
 import aiohttp
 import numpy as np
 import requests
-
 from gptdb._private.pydantic import EXTRA_FORBID, BaseModel, ConfigDict, Field
 from gptdb.configs.model_config import get_device
 from gptdb.core import RerankEmbeddings

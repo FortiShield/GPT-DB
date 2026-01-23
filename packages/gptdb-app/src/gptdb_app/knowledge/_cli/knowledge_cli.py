@@ -3,7 +3,6 @@ import logging
 import os
 
 import click
-
 from gptdb.configs.model_config import DATASETS_DIR
 
 _DEFAULT_API_ADDRESS: str = "http://127.0.0.1:5670"

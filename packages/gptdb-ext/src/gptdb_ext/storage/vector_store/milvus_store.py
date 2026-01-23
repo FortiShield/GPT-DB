@@ -9,8 +9,6 @@ import re
 from dataclasses import dataclass, field
 from typing import Any, Iterable, List, Optional
 
-from pymilvus.milvus_client import IndexParams, MilvusClient
-
 from gptdb.core import Chunk, Embeddings
 from gptdb.core.awel.flow import Parameter, ResourceCategory, register_resource
 from gptdb.storage.vector_store.base import (
@@ -23,6 +21,7 @@ from gptdb.storage.vector_store.filters import FilterOperator, MetadataFilters
 from gptdb.util import string_utils
 from gptdb.util.i18n_utils import _
 from gptdb.util.json_utils import serialize
+from pymilvus.milvus_client import IndexParams, MilvusClient
 
 logger = logging.getLogger(__name__)
 

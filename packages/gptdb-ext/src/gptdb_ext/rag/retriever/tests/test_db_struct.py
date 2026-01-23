@@ -1,9 +1,8 @@
 from typing import List
 from unittest.mock import MagicMock, patch
 
-import pytest
-
 import gptdb_ext
+import pytest
 from gptdb.core import Chunk
 from gptdb_ext.rag.retriever.db_schema import DBSchemaRetriever
 

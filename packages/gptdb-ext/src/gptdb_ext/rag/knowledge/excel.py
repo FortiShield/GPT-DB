@@ -4,7 +4,6 @@ import logging
 from typing import Any, Dict, List, Optional, Tuple, Union
 
 import pandas as pd
-
 from gptdb.core import Document
 from gptdb.rag.knowledge.base import (
     ChunkStrategy,

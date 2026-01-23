@@ -1,7 +1,6 @@
 from typing import Dict, Union
 
 import pytest
-
 from gptdb.core.interface.storage import (
     InMemoryStorage,
     QuerySpec,

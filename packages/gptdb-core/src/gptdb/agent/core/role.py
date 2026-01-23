@@ -4,10 +4,9 @@ from abc import ABC
 from enum import Enum
 from typing import TYPE_CHECKING, Dict, List, Optional, Type, Union
 
+from gptdb._private.pydantic import BaseModel, ConfigDict, Field
 from jinja2 import Environment, Template, meta
 from jinja2.sandbox import SandboxedEnvironment
-
-from gptdb._private.pydantic import BaseModel, ConfigDict, Field
 
 from .action.base import ActionOutput
 from .memory.agent_memory import (

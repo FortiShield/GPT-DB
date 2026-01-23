@@ -8,7 +8,6 @@ from fastapi.middleware.cors import CORSMiddleware
 
 # fastapi import time cost about 0.05s
 from fastapi.staticfiles import StaticFiles
-
 from gptdb._version import version
 from gptdb.component import SystemApp
 from gptdb.configs.model_config import (

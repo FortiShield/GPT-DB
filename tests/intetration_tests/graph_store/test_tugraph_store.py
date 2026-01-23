@@ -1,7 +1,6 @@
 # test_tugraph_tugraph_store_adapter.py
 
 import pytest
-
 from gptdb.storage.graph_store.tugraph_store import TuGraphStore, TuGraphStoreConfig
 from gptdb.storage.knowledge_graph.community.tugraph_store_adapter import (
     TuGraphStoreAdapter,

@@ -1,7 +1,5 @@
 import pytest
 from fastapi import FastAPI
-from httpx import AsyncClient
-
 from gptdb.component import SystemApp
 from gptdb.storage.metadata import db
 from gptdb_serve.core import BaseServeConfig
@@ -11,6 +9,7 @@ from gptdb_serve.core.tests.conftest import (  # noqa: F401
     config,
     system_app,
 )
+from httpx import AsyncClient
 
 from ..api.endpoints import init_endpoints, router
 from ..config import SERVE_CONFIG_KEY_PREFIX

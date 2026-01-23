@@ -3,8 +3,6 @@
 import json
 from typing import Dict, List, Optional, Type
 
-from sqlalchemy.orm import Session
-
 from gptdb.core.interface.message import (
     BaseMessage,
     ConversationIdentifier,
@@ -15,6 +13,7 @@ from gptdb.core.interface.message import (
     _messages_from_dict,
 )
 from gptdb.core.interface.storage import StorageItemAdapter
+from sqlalchemy.orm import Session
 
 from .chat_history_db import ChatHistoryEntity, ChatHistoryMessageEntity
 

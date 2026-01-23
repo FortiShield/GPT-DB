@@ -1,7 +1,6 @@
 import json
 
 import pytest
-
 from gptdb.core.interface.prompt import (
     PromptManager,
     PromptTemplate,

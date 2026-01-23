@@ -1,7 +1,6 @@
 from typing import List, Optional, Union
 
 from fastapi import File, UploadFile
-
 from gptdb._private.pydantic import BaseModel, ConfigDict, Field
 from gptdb_ext.rag.chunk_manager import ChunkParameters
 

@@ -1,7 +1,6 @@
 from typing import List
 
 import pytest
-
 from gptdb.storage.metadata import db
 
 from ..api.schemas import ServeRequest, ServerResponse

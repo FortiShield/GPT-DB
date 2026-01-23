@@ -1,139 +1,132 @@
 .DEFAULT_GOAL := help
 
-SHELL=/bin/bash
-VENV = .venv.make
+SHELL := /bin/bash
+PYTHON := 3.11
+VENV := .venv.make
 
-# Detect the operating system and set the virtualenv bin directory
+# -------------------------
+# Packages
+# -------------------------
+PACKAGES := \
+	gptdb-accelerator \
+	gptdb-client \
+	gptdb-ext \
+	gptdb-serve \
+	gptdb-app \
+	gptdb-core \
+	gptdb-sandbox
+
+PKG ?=
+
+# -------------------------
+# OS / venv handling
+# -------------------------
 ifeq ($(OS),Windows_NT)
-	VENV_BIN=$(VENV)/Scripts
+	VENV_BIN := $(VENV)/Scripts
 else
-	VENV_BIN=$(VENV)/bin
+	VENV_BIN := $(VENV)/bin
 endif
 
-setup: $(VENV)/bin/activate
-
-$(VENV)/bin/activate: $(VENV)/.venv-timestamp
+# -------------------------
+# Virtualenv
+# -------------------------
+setup: $(VENV)/.venv-timestamp ## Setup dev virtualenv
 
 $(VENV)/.venv-timestamp: uv.lock
-	# Create new virtual environment if setup.py has changed
-	uv venv --python 3.11 $(VENV)
-	uv pip install --prefix $(VENV) ruff
-	uv pip install --prefix $(VENV) mypy
-	uv pip install --prefix $(VENV) pytest
-	touch $(VENV)/.venv-timestamp
+	uv venv --python $(PYTHON) $(VENV)
+	uv pip install --prefix $(VENV) ruff mypy pytest
+	touch $@
 
-testenv: $(VENV)/.testenv
+# -------------------------
+# Sync deps
+# -------------------------
+testenv: setup ## Sync dependencies
+	. $(VENV_BIN)/activate && uv sync --all-packages \
+		--extra base \
+		--extra proxy_openai \
+		--extra rag \
+		--extra storage_chromadb \
+		--extra gptdbs \
+		--link-mode=copy
+	cp .devcontainer/gptdb.pth $(VENV)/lib/python$(PYTHON)/site-packages || true
 
-$(VENV)/.testenv: $(VENV)/bin/activate
-	# check uv version and use appropriate parameters
-	if . $(VENV_BIN)/activate && uv sync --help | grep -q -- "--active"; then \
-		. $(VENV_BIN)/activate && uv sync --active --all-packages \
-			--extra "base" \
-			--extra "proxy_openai" \
-			--extra "rag" \
-			--extra "storage_chromadb" \
-			--extra "gptdbs" \
-			--link-mode=copy; \
-	else \
-		. $(VENV_BIN)/activate && uv sync --all-packages \
-			--extra "base" \
-			--extra "proxy_openai" \
-			--extra "rag" \
-			--extra "storage_chromadb" \
-			--extra "gptdbs" \
-			--link-mode=copy; \
-	fi
-	cp .devcontainer/gptdb.pth $(VENV)/lib/python3.11/site-packages
-	touch $(VENV)/.testenv
-
-
-.PHONY: fmt
-fmt: setup ## Format Python code
-	# Format code
-	$(VENV_BIN)/ruff format packages
-	$(VENV_BIN)/ruff format --exclude="examples/notebook" examples
-	$(VENV_BIN)/ruff format i18n
-	$(VENV_BIN)/ruff format scripts/update_version_all.py
-	$(VENV_BIN)/ruff format install_help.py
-	# Sort imports
-	$(VENV_BIN)/ruff check --select I --fix packages
-	$(VENV_BIN)/ruff check --select I --fix --exclude="examples/notebook" examples
-	$(VENV_BIN)/ruff check --select I --fix i18n
-	$(VENV_BIN)/ruff check --select I --fix scripts/update_version_all.py
-	$(VENV_BIN)/ruff check --select I --fix install_help.py
-
+# -------------------------
+# Formatting
+# -------------------------
+fmt: setup ## Format code
+	$(VENV_BIN)/ruff format packages examples i18n scripts
+	$(VENV_BIN)/ruff check --select I --fix packages examples i18n scripts
 	$(VENV_BIN)/ruff check --fix packages \
 		--exclude="packages/gptdb-serve/src/**"
 
-	$(VENV_BIN)/ruff check --fix packages/gptdb-serve --ignore F811,F841
+fmt-check: setup ## Check formatting
+	$(VENV_BIN)/ruff format --check packages examples
+	$(VENV_BIN)/ruff check --select I packages examples
 
-	# Not need to check examples/notebook
-	#$(VENV_BIN)/ruff check --fix --exclude="examples/notebook" examples
-
-.PHONY: fmt-check
-fmt-check: setup ## Check Python code formatting and style without making changes
-	$(VENV_BIN)/ruff format --check packages
-	$(VENV_BIN)/ruff format --check --exclude="examples/notebook" examples
-	$(VENV_BIN)/ruff check --select I packages
-	$(VENV_BIN)/ruff check --select I --exclude="examples/notebook" examples
-	$(VENV_BIN)/ruff check --fix packages \
-		--exclude="packages/gptdb-serve/src/**"
-
-	$(VENV_BIN)/ruff check --fix packages/gptdb-serve --ignore F811,F841
-
-
-.PHONY: pre-commit
-pre-commit: fmt-check test test-doc mypy ## Run formatting and unit tests before committing
-
-test: $(VENV)/.testenv ## Run unit tests
+# -------------------------
+# Tests
+# -------------------------
+test: testenv ## Run all tests
 	$(VENV_BIN)/pytest --pyargs gptdb
 
-.PHONY: test-doc
-test-doc: $(VENV)/.testenv ## Run doctests
-	# -k "not test_" skips tests that are not doctests.
-	$(VENV_BIN)/pytest --doctest-modules -k "not test_" packages
+test-%: testenv ## Run tests for a single package
+	$(VENV_BIN)/pytest packages/$*/tests
 
-.PHONY: mypy
-mypy: $(VENV)/.testenv ## Run mypy checks
-	# https://github.com/python/mypy
-	$(VENV_BIN)/mypy --config-file .mypy.ini --ignore-missing-imports packages/gptdb-core/
-	# $(VENV_BIN)/mypy --config-file .mypy.ini gptdb/rag/ gptdb/datasource/ gptdb/client/ gptdb/agent/ gptdb/vis/ gptdb/experimental/
-	# rag depends on core and storage, so we not need to check it again.
-	# $(VENV_BIN)/mypy --config-file .mypy.ini gptdb/storage/
-	# $(VENV_BIN)/mypy --config-file .mypy.ini gptdb/core/
-	# TODO: More package checks with mypy.
+all-test: $(addprefix test-,$(PACKAGES)) ## Test all packages
 
-.PHONY: coverage
-coverage: setup ## Run tests and report coverage
-	$(VENV_BIN)/pytest --pyargs gptdb --cov=gptdb
+# -------------------------
+# Mypy
+# -------------------------
+mypy: testenv ## Run mypy
+	$(VENV_BIN)/mypy --config-file .mypy.ini packages/gptdb-core
 
-.PHONY: clean
-clean: ## Clean up the environment
+# -------------------------
+# Build
+# -------------------------
+build: clean-dist ## Build all packages
+	uv build --all-packages
+
+build-%: ## Build a single package
+	cd packages/$* && uv sync && uv build
+
+all-build: $(addprefix build-,$(PACKAGES)) ## Build all packages individually
+
+# -------------------------
+# Docker
+# -------------------------
+docker-%: ## Build docker image for a package
+	cd packages/$* && docker build -t gptdb/$*:latest .
+
+all-docker: $(addprefix docker-,$(PACKAGES)) ## Docker build all packages
+
+# -------------------------
+# Publish
+# -------------------------
+publish: build ## Publish all packages to PyPI
+	uv publish
+
+publish-test: build ## Publish to TestPyPI
+	uv publish --index testpypi
+
+publish-%: build-% ## Publish a single package
+	cd packages/$* && uv publish
+
+# -------------------------
+# Clean
+# -------------------------
+clean: ## Clean env
 	rm -rf $(VENV)
 	find . -type f -name '*.pyc' -delete
 	find . -type d -name '__pycache__' -delete
-	# find . -type d -name '.pytest_cache' -delete
-	find . -type d -name '.coverage' -delete
 
-.PHONY: clean-dist
-clean-dist: ## Clean up the distribution
-	rm -rf dist/ *.egg-info build/
+clean-dist: ## Clean build artifacts
+	rm -rf dist build *.egg-info
 
-.PHONY: build 
-build: clean-dist ## Package the project for distribution
-	uv build --all-packages
-	rm -rf dist/gptdb_app-*
-	rm -rf dist/gptdb_serve-*
-
-.PHONY: publish
-publish: build ## Upload the package to PyPI
-	uv publish
-
-.PHONY: publish-test
-publish-test: build ## Upload the package to PyPI
-	uv publish --index testpypi
-
-.PHONY: help
-help:  ## Display this help screen
+# -------------------------
+# Help
+# -------------------------
+help: ## Show help
 	@echo "Available commands:"
-	@grep -E '^[a-z.A-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-18s\033[0m %s\n", $$1, $$2}' | sort
+	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) \
+	| awk 'BEGIN {FS=":.*?## "}; {printf "  \033[36m%-20s\033[0m %s\n", $$1, $$2}' \
+	| sort

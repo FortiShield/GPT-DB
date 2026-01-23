@@ -53,7 +53,7 @@ OB_DATABASE=test
 ## Optional: If {OB_ENABLE_NORMALIZE_VECTOR} is set, the vector stored in OceanBase is normalized.
 # OB_ENABLE_NORMALIZE_VECTOR=True
 ```
-If you want to support more vector db, you can integrate yourself.[how to integrate](https://gpt-db.readthedocs.io/en/latest/modules/vector.html)
+If you want to support more vector db, you can integrate yourself.[how to integrate](https://db-gpt.readthedocs.io/en/latest/modules/vector.html)
 ```commandline
 #*******************************************************************#
 #**                  VECTOR STORE SETTINGS                       **#

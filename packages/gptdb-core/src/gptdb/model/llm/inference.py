@@ -11,6 +11,7 @@ import gc
 from typing import Dict, Iterable
 
 import torch
+from gptdb.model.utils.llm_utils import is_partial_stop, is_sentence_complete
 from transformers.generation.logits_process import (
     LogitsProcessorList,
     RepetitionPenaltyLogitsProcessor,
@@ -18,8 +19,6 @@ from transformers.generation.logits_process import (
     TopKLogitsWarper,
     TopPLogitsWarper,
 )
-
-from gptdb.model.utils.llm_utils import is_partial_stop, is_sentence_complete
 
 
 def prepare_logits_processor(

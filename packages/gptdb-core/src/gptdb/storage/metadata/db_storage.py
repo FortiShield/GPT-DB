@@ -3,9 +3,6 @@
 from contextlib import contextmanager
 from typing import Dict, Iterator, List, Optional, Type, Union
 
-from sqlalchemy import URL, inspect
-from sqlalchemy.orm import DeclarativeMeta, Session
-
 from gptdb.core import Serializer
 from gptdb.core.interface.storage import (
     QuerySpec,
@@ -14,6 +11,8 @@ from gptdb.core.interface.storage import (
     StorageItemAdapter,
     T,
 )
+from sqlalchemy import URL, inspect
+from sqlalchemy.orm import DeclarativeMeta, Session
 
 from .db_manager import BaseModel, BaseQuery, DatabaseManager
 

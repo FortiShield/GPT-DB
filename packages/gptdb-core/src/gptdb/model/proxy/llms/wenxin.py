@@ -6,7 +6,6 @@ from dataclasses import dataclass, field
 from typing import Iterator, Optional, Type, Union
 
 from cachetools import TTLCache, cached
-
 from gptdb.core import (
     MessageConverter,
     ModelMetadata,

@@ -1,9 +1,6 @@
 from typing import Dict, Type
 
 import pytest
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.orm import Session, declarative_base
-
 from gptdb.core.interface.storage import (
     QuerySpec,
     ResourceIdentifier,
@@ -13,6 +10,8 @@ from gptdb.core.interface.storage import (
 from gptdb.core.interface.tests.test_storage import MockResourceIdentifier
 from gptdb.storage.metadata.db_storage import SQLAlchemyStorage
 from gptdb.util.serialization.json_serialization import JsonSerializer
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import Session, declarative_base
 
 Base = declarative_base()
 

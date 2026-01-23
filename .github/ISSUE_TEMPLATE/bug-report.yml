@@ -84,13 +84,13 @@ body:
       description: Select your installation method
       options:
         - label: >
-            [Installation From Source](https://gpt-db.readthedocs.io/en/latest/getting_started/install/deploy/deploy.html)
+            [Installation From Source](https://db-gpt.readthedocs.io/en/latest/getting_started/install/deploy/deploy.html)
         - label: >
-            [Docker Installation](https://gpt-db.readthedocs.io/en/latest/getting_started/install/docker/docker.html)
+            [Docker Installation](https://db-gpt.readthedocs.io/en/latest/getting_started/install/docker/docker.html)
         - label: >
-            [Docker Compose Installation](https://gpt-db.readthedocs.io/en/latest/getting_started/install/docker/docker.html)
+            [Docker Compose Installation](https://db-gpt.readthedocs.io/en/latest/getting_started/install/docker/docker.html)
         - label: >
-            [Cluster Installation](https://gpt-db.readthedocs.io/en/latest/getting_started/install/llm/cluster/model_cluster.html)
+            [Cluster Installation](https://db-gpt.readthedocs.io/en/latest/getting_started/install/llm/cluster/model_cluster.html)
         - label: AutoDL Image
         - label: Other
 

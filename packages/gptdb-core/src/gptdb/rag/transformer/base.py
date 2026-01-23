@@ -4,9 +4,8 @@ import logging
 from abc import ABC, abstractmethod
 from typing import Dict, List, Optional
 
-from tenacity import retry, stop_after_attempt, wait_fixed
-
 from gptdb.core.interface.embeddings import Embeddings
+from tenacity import retry, stop_after_attempt, wait_fixed
 
 logger = logging.getLogger(__name__)
 

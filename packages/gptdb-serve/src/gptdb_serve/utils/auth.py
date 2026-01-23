@@ -2,7 +2,6 @@ import logging
 from typing import Optional
 
 from fastapi import Header
-
 from gptdb._private.pydantic import BaseModel
 
 logger = logging.getLogger(__name__)

@@ -48,9 +48,8 @@ from .base import Trigger, TriggerMetadata
 
 if TYPE_CHECKING:
     from fastapi import APIRouter, FastAPI
-    from starlette.requests import Request
-
     from gptdb.core.interface.llm import ModelRequestContext
+    from starlette.requests import Request
 
     RequestBody = Union[Type[Request], Type[BaseModel], Type[Dict[str, Any]], Type[str]]
     CommonRequestType = Union[Request, BaseModel, Dict[str, Any], str, None]
@@ -255,6 +254,7 @@ class CommonLLMHttpRequestBody(BaseHttpBody):
     conv_uid: Optional[str] = Field(
         default=None, description="The conversation id of the model inference"
     )
+    app_code: Optional[str] = Field(default=None, description="The app id of the app")
     span_id: Optional[str] = Field(
         default=None, description="The span id of the model inference"
     )

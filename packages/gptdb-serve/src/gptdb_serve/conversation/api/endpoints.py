@@ -6,11 +6,10 @@ from typing import List, Literal, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from fastapi.security.http import HTTPAuthorizationCredentials, HTTPBearer
-from starlette.responses import JSONResponse, StreamingResponse
-
 from gptdb.component import SystemApp
 from gptdb.util import PaginationResult
 from gptdb_serve.core import Result
+from starlette.responses import JSONResponse, StreamingResponse
 
 from ..config import SERVE_SERVICE_COMPONENT_NAME, ServeConfig
 from ..service.service import Service

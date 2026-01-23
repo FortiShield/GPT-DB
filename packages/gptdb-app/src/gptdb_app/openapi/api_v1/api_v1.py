@@ -10,7 +10,6 @@ from typing import List, Optional, cast
 import pandas as pd
 from fastapi import APIRouter, Body, Depends, File, Query, UploadFile
 from fastapi.responses import StreamingResponse
-
 from gptdb._private.config import Config
 from gptdb.component import ComponentType
 from gptdb.configs import TAG_KEY_KNOWLEDGE_CHAT_DOMAIN_TYPE
@@ -535,6 +534,7 @@ async def chat_completions(
                     user_query=dialogue.user_input,
                     user_code=dialogue.user_name,
                     sys_code=dialogue.sys_code,
+                    app_code=dialogue.app_code,
                     **dialogue.ext_info,
                 ),
                 headers=headers,
@@ -551,6 +551,7 @@ async def chat_completions(
                 chat_param=dialogue.select_param,
                 user_name=dialogue.user_name,
                 sys_code=dialogue.sys_code,
+                app_code=dialogue.app_code,
                 incremental=dialogue.incremental,
             )
             return StreamingResponse(

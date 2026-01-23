@@ -3,7 +3,6 @@ import os
 from typing import Any, Dict, Optional
 
 import click
-
 from gptdb.configs.model_config import LOGDIR
 from gptdb.model.cli import add_start_server_options
 from gptdb.util.command_utils import _run_current_with_daemon, _stop_service

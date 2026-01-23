@@ -1,7 +1,6 @@
 from typing import List
 
 import pytest
-
 from gptdb.component import SystemApp
 from gptdb.storage.metadata import db
 from gptdb_serve.core import BaseServeConfig

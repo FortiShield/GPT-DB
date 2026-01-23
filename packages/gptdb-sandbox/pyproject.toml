@@ -22,7 +22,7 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://github.com/khulnasoft/GPT-DB"
-Documentation = "http://docs.gptdb.cn/docs/overview"
+Documentation = "http://gpt.khulnasoft.com/docs/overview"
 Repository = "https://github.com/khulnasoft/GPT-DB.git"
 Issues = "https://github.com/khulnasoft/GPT-DB/issues"
 

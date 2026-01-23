@@ -184,16 +184,20 @@ try:
     from gptdb.util.cli.flow_compat import tool_flow_cli_group
     from gptdb.util.gptdbs.cli import (
         add_repo,
+    )
+    from gptdb.util.gptdbs.cli import install as app_install
+    from gptdb.util.gptdbs.cli import list_all_apps as app_list_remote
+    from gptdb.util.gptdbs.cli import (
         list_installed_apps,
         list_repos,
         new_gptdbs,
         reinstall,
         remove_repo,
+    )
+    from gptdb.util.gptdbs.cli import uninstall as app_uninstall
+    from gptdb.util.gptdbs.cli import (
         update_repo,
     )
-    from gptdb.util.gptdbs.cli import install as app_install
-    from gptdb.util.gptdbs.cli import list_all_apps as app_list_remote
-    from gptdb.util.gptdbs.cli import uninstall as app_uninstall
 
     add_command_alias(list_repos, name="list", parent_group=repo)
     add_command_alias(add_repo, name="add", parent_group=repo)

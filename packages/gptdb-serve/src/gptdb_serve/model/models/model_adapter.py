@@ -1,10 +1,9 @@
 import json
 from typing import Type
 
-from sqlalchemy.orm import Session
-
 from gptdb.core.interface.storage import StorageItemAdapter
 from gptdb.model.cluster.storage import ModelStorageIdentifier, ModelStorageItem
+from sqlalchemy.orm import Session
 
 from .models import ServeEntity
 

@@ -1,7 +1,6 @@
 from typing import List
 
 import pytest
-
 from gptdb.core.interface.message import AIMessage, BaseMessage, HumanMessage
 from gptdb.core.operators import BufferedConversationMapperOperator
 

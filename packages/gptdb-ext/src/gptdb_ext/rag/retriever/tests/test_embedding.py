@@ -1,7 +1,6 @@
 from unittest.mock import MagicMock
 
 import pytest
-
 from gptdb.core import Chunk
 from gptdb.rag.retriever.embedding import EmbeddingRetriever
 

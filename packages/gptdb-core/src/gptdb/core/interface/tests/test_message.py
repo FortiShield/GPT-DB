@@ -1,7 +1,6 @@
 from datetime import datetime
 
 import pytest
-
 from gptdb.core.interface.message import (
     AIMessage,
     BaseMessage,

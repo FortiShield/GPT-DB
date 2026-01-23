@@ -7,7 +7,6 @@ from typing import Any, AsyncGenerator, Dict, List, Optional, Union
 from urllib.parse import urlparse
 
 import httpx
-
 from gptdb._private.pydantic import model_to_dict
 from gptdb.core.schema.api import ChatCompletionResponse, ChatCompletionStreamResponse
 

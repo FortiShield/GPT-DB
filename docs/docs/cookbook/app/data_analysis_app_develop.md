@@ -161,21 +161,21 @@ gptdb app list-remote
 ┏━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃           存储库  ┃ 类型       ┃                               名称 ┃
 ┡━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
-│ eosphoros/gptdbs │ operators │               awel-simple-operator │
-│ eosphoros/gptdbs │ resources │                    jina-web-reader │
-│ eosphoros/gptdbs │ resources │          simple-calculator-example │
-│ eosphoros/gptdbs │ workflow  │                all-in-one-entrance │
-│ eosphoros/gptdbs │ workflow  │        andrewyng-translation-agent │
-│ eosphoros/gptdbs │ workflow  │             awel-flow-example-chat │
-│ eosphoros/gptdbs │ workflow  │         awel-flow-rag-chat-example │
-│ eosphoros/gptdbs │ workflow  │      awel-flow-rag-summary-example │
-│ eosphoros/gptdbs │ workflow  │    awel-flow-simple-streaming-chat │
-│ eosphoros/gptdbs │ workflow  │          awel-flow-web-info-search │
-│ eosphoros/gptdbs │ workflow  │                 db-expert-assisant │
-│ eosphoros/gptdbs │ workflow  │ financial-report-knowledge-factory │
-│ eosphoros/gptdbs │ workflow  │                financial-robot-app │
-│ eosphoros/gptdbs │ workflow  │             rag-save-url-to-vstore │
-│ eosphoros/gptdbs │ workflow  │          rag-url-knowledge-example │
+│ khulnasoft/gptdbs │ operators │               awel-simple-operator │
+│ khulnasoft/gptdbs │ resources │                    jina-web-reader │
+│ khulnasoft/gptdbs │ resources │          simple-calculator-example │
+│ khulnasoft/gptdbs │ workflow  │                all-in-one-entrance │
+│ khulnasoft/gptdbs │ workflow  │        andrewyng-translation-agent │
+│ khulnasoft/gptdbs │ workflow  │             awel-flow-example-chat │
+│ khulnasoft/gptdbs │ workflow  │         awel-flow-rag-chat-example │
+│ khulnasoft/gptdbs │ workflow  │      awel-flow-rag-summary-example │
+│ khulnasoft/gptdbs │ workflow  │    awel-flow-simple-streaming-chat │
+│ khulnasoft/gptdbs │ workflow  │          awel-flow-web-info-search │
+│ khulnasoft/gptdbs │ workflow  │                 db-expert-assisant │
+│ khulnasoft/gptdbs │ workflow  │ financial-report-knowledge-factory │
+│ khulnasoft/gptdbs │ workflow  │                financial-robot-app │
+│ khulnasoft/gptdbs │ workflow  │             rag-save-url-to-vstore │
+│ khulnasoft/gptdbs │ workflow  │          rag-url-knowledge-example │
 └──────────────────┴───────────┴────────────────────────────────────┘
 
 ```

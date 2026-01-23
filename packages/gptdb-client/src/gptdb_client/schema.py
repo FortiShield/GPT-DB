@@ -6,7 +6,6 @@ from enum import Enum
 from typing import Any, Dict, List, Optional, Union
 
 from fastapi import File, UploadFile
-
 from gptdb._private.pydantic import BaseModel, ConfigDict, Field, model_validator
 from gptdb.core.awel import CommonLLMHttpRequestBody
 from gptdb.core.schema.api import APIChatCompletionRequest

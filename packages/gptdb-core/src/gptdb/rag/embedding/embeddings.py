@@ -5,7 +5,6 @@ from typing import Any, Dict, List, Optional, Type
 
 import aiohttp
 import requests
-
 from gptdb._private.pydantic import EXTRA_FORBID, BaseModel, ConfigDict, Field
 from gptdb.core import EmbeddingModelMetadata, Embeddings
 from gptdb.core.awel.flow import Parameter, ResourceCategory, register_resource

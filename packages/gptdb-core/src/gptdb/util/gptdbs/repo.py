@@ -26,7 +26,7 @@ from .loader import _load_package_from_path
 
 cl = CliLogger()
 
-_DEFAULT_REPO = "eosphoros/gptdbs"
+_DEFAULT_REPO = "khulnasoft/gptdbs"
 
 logger = logging.getLogger(__name__)
 
@@ -231,7 +231,7 @@ def _get_repo_path(repo: str) -> Path:
     if len(repo_arr) != 2:
         cl.error(
             f"Invalid repo name '{repo}', repo name must split by '/', "
-            f"eg.(eosphoros/gptdbs).",
+            f"eg.(khulnasoft/gptdbs).",
             exit_code=1,
         )
     return Path(GPTDBS_REPO_HOME) / repo_arr[0] / repo_arr[1]
@@ -292,7 +292,7 @@ def add_repo(repo: str, repo_url: str, branch: str | None = None):
     if len(repo_arr) != 2:
         cl.error(
             f"Invalid repo name '{repo}', repo name must split by '/', "
-            "eg.(eosphoros/gptdbs).",
+            "eg.(khulnasoft/gptdbs).",
             exit_code=1,
         )
     repo_name = repo_arr[1]

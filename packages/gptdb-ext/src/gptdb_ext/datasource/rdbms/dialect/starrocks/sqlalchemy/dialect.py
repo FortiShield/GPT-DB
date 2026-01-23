@@ -16,11 +16,10 @@
 import logging
 from typing import Any, Dict, List, Optional, cast
 
+from gptdb_ext.datasource.rdbms.dialect.starrocks.sqlalchemy import datatype
 from sqlalchemy import exc, log, text
 from sqlalchemy.dialects.mysql.pymysql import MySQLDialect_pymysql
 from sqlalchemy.engine import Connection
-
-from gptdb_ext.datasource.rdbms.dialect.starrocks.sqlalchemy import datatype
 
 logger = logging.getLogger(__name__)
 

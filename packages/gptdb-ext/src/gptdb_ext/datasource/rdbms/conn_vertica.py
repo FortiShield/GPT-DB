@@ -6,9 +6,6 @@ from typing import Any, Dict, Iterable, List, Optional, Tuple, Type, cast
 from urllib.parse import quote
 from urllib.parse import quote_plus as urlquote
 
-from sqlalchemy import text
-from sqlalchemy.dialects import registry
-
 from gptdb.core.awel.flow import (
     TAGS_ORDER_HIGH,
     ResourceCategory,
@@ -16,6 +13,8 @@ from gptdb.core.awel.flow import (
 )
 from gptdb.datasource.rdbms.base import RDBMSConnector, RDBMSDatasourceParameters
 from gptdb.util.i18n_utils import _
+from sqlalchemy import text
+from sqlalchemy.dialects import registry
 
 logger = logging.getLogger(__name__)
 registry.register(

@@ -30,7 +30,7 @@ class MyPluginFilter(BaseModel):
 class PluginHubParam(BaseModel):
     channel: Optional[str] = Field("git", description="Plugin storage channel")
     url: Optional[str] = Field(
-        "https://github.com/khulnasoft/GPT-DB-Plugins.git",
+        "https://github.com/khulnasoft-bot/GPT-DB-Plugins.git",
         description="Plugin storage url",
     )
     branch: Optional[str] = Field(

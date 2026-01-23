@@ -8,7 +8,6 @@ import duckdb
 import numpy as np
 import pandas as pd
 import sqlparse
-
 from gptdb.util.file_client import FileClient
 from gptdb.util.pd_utils import csv_colunm_foramt
 

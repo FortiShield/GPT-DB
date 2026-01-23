@@ -1,5 +1,4 @@
 import pytest
-
 from gptdb.core.interface.storage import InMemoryStorage
 from gptdb.util.serialization.json_serialization import JsonSerializer
 

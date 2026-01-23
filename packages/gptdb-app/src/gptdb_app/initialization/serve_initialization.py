@@ -94,9 +94,7 @@ def register_serve_apps(
         )
 
     # ################################ Prompt Serve Register Begin ####################
-    from gptdb_serve.prompt.serve import (
-        Serve as PromptServe,
-    )
+    from gptdb_serve.prompt.serve import Serve as PromptServe
 
     # Register serve app
     system_app.register(
@@ -208,7 +206,7 @@ def register_serve_apps(
     )
     # ################################ Chat Feedback Register End #####################
 
-    # ################################ DbGpts Register Begin ##########################
+    # ################################ GptDbs Register Begin ##########################
     # Register serve gptdbshub
     from gptdb_serve.gptdbs.hub.serve import Serve as GptdbsHubServe
 
@@ -233,7 +231,7 @@ def register_serve_apps(
             api_keys=global_api_keys,
         ),
     )
-    # ################################ DbGpts Register End ############################
+    # ################################ GptDbs Register End ############################
 
     # ################################ File Serve Register Begin ######################
 

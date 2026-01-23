@@ -78,8 +78,8 @@ Core capabilities of the benchmarking module:
 </p>
 
 - Step3: Register LLM on the GPT-DB platform 
-  - Method 1: Configure via configuration file. Reference: [ProxyModel Configuration](http://docs.gptdb.cn/docs/next/installation/advanced_usage/More_proxyllms)
-  - Method 2: Configure via product page. Reference: [Models](http://docs.gptdb.cn/docs/next/application/llms)
+  - Method 1: Configure via configuration file. Reference: [ProxyModel Configuration](http://gpt.khulnasoft.com/docs/next/installation/advanced_usage/More_proxyllms)
+  - Method 2: Configure via product page. Reference: [Models](http://gpt.khulnasoft.com/docs/next/application/llms)
 
 ## Create Evaluation Task
 - Step1: Click "Create Benchmark" to create an evaluation task

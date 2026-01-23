@@ -1,12 +1,11 @@
 import pytest
 from fastapi import FastAPI
-from httpx import AsyncClient
-
 from gptdb.component import SystemApp
 from gptdb.storage.metadata import db
 from gptdb.util import PaginationResult
 from gptdb_serve.core import BaseServeConfig
 from gptdb_serve.core.tests.conftest import asystem_app, client, config  # noqa: F401
+from httpx import AsyncClient
 
 from ..api.endpoints import init_endpoints, router
 from ..api.schemas import ServerResponse

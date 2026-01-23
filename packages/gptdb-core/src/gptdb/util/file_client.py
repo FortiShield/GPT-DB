@@ -2,7 +2,6 @@ import os
 
 import aiofiles
 from fastapi import File, UploadFile
-
 from gptdb.configs.model_config import KNOWLEDGE_UPLOAD_ROOT_PATH
 
 

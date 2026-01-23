@@ -3,7 +3,6 @@ import threading
 import time
 
 import schedule
-
 from gptdb.component import BaseComponent, SystemApp
 
 logger = logging.getLogger(__name__)

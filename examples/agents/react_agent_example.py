@@ -5,8 +5,6 @@ import sys
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 
-from typing_extensions import Annotated, Doc
-
 from gptdb.agent import (
     AgentContext,
     AgentMemory,
@@ -22,6 +20,7 @@ from gptdb.agent.expand.react_agent import ReActAgent
 from gptdb.agent.resource import ToolPack, tool
 from gptdb.rag.embedding import OpenAPIEmbeddings
 from gptdb_ext.storage.vector_store.chroma_store import ChromaStore, ChromaVectorConfig
+from typing_extensions import Annotated, Doc
 
 logging.basicConfig(
     stream=sys.stdout,

@@ -1,5 +1,4 @@
 import pytest
-
 from gptdb.core.interface.prompt import PromptManager, PromptTemplate
 from gptdb.storage.metadata import db
 from gptdb.storage.metadata.db_storage import SQLAlchemyStorage

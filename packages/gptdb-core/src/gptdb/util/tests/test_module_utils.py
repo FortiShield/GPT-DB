@@ -6,7 +6,6 @@ from dataclasses import dataclass
 from typing import Type
 
 import pytest
-
 from gptdb.util.module_utils import ModelScanner, ScannerConfig
 
 

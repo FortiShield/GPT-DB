@@ -1,8 +1,6 @@
 import os
 from typing import Any, Dict, Optional
 
-from pandas import DataFrame
-
 from gptdb._private.pydantic import BaseModel, Field
 from gptdb.configs.model_config import MODEL_PATH, PILOT_PATH
 from gptdb.core import LLMClient, ModelMessage, ModelMessageRoleType, ModelRequest
@@ -14,13 +12,14 @@ from gptdb.util.chat_util import run_async_tasks
 from gptdb_ext.datasource.rdbms.conn_sqlite import SQLiteTempConnector
 from gptdb_ext.rag.operators.schema_linking import SchemaLinkingOperator
 from gptdb_ext.storage.vector_store.chroma_store import ChromaStore, ChromaVectorConfig
+from pandas import DataFrame
 
 """AWEL: Simple nl-schemalinking-sql-chart operator example
 
     pre-requirements:
         1. install openai python sdk
         ```
-            pip install "gpt-db[openai]"
+            pip install "db-gpt[openai]"
         ```
         2. set openai key and base
         ```

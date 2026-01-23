@@ -93,8 +93,8 @@ For the final generated knowledge graph, we used AntV's G6 engine to upgrade the
 ## Acknowledgements
 This iteration is inseparable from the participation of developers and users in the community, and it also further cooperates with the [TuGraph](https://github.com/TuGraph-family) and [AntV](https://github.com/antvis) communities. Thanks to all the contributors who made this release possible!
 
-@Aries-ckt, @Dreammy23, @Hec-gitHub, @JxQg, @KingSkyLi, @M1n9X, @bigcash, @chaplinthink, @khulnasoft, @dusens, @fangyinc, @huangjh131, @hustcc, @lhwan, @whyuds and @yhjun1026
+@Aries-ckt, @Dreammy23, @Hec-gitHub, @JxQg, @KingSkyLi, @M1n9X, @bigcash, @chaplinthink, @csunny, @dusens, @fangyinc, @huangjh131, @hustcc, @lhwan, @whyuds and @yhjun1026
 
 
 ## Reference
-- [中文手册](https://www.yuque.com/eosphoros/gptdb-docs/ym574wh2hddunfbd)
+- [中文手册](https://www.yuque.com/khulnasoft/gptdb-docs/ym574wh2hddunfbd)

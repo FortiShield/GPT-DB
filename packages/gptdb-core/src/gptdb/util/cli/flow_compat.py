@@ -4,7 +4,6 @@ import os
 from typing import List, Optional, Tuple, Union
 
 import click
-
 from gptdb.configs.model_config import ROOT_PATH
 from gptdb.util.console import CliLogger
 from gptdb.util.i18n_utils import _

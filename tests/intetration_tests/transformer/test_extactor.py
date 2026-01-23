@@ -1,7 +1,6 @@
 import json
 
 import pytest
-
 from gptdb.model.proxy.llms.chatgpt import OpenAILLMClient
 from gptdb.rag.transformer.keyword_extractor import KeywordExtractor
 from gptdb.rag.transformer.triplet_extractor import TripletExtractor

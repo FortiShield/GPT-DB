@@ -5,11 +5,10 @@ import logging
 from datetime import datetime
 from typing import Callable, List, Optional, Type, Union, cast
 
-from typing_extensions import TypedDict
-
 from gptdb.core import LLMClient
 from gptdb.util.annotations import immutable, mutable
 from gptdb.util.id_generator import new_id
+from typing_extensions import TypedDict
 
 from .base import (
     DiscardedMemoryFragments,
