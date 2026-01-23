@@ -40,7 +40,7 @@ The scene value of the benchmark, e.g. The marking evaluation task name
 <b>model_list</b> <font color="gray"> object </font> <font color="red"> Required </font>
 
 The model name list of the benchmark will execute, e.g. ["DeepSeek-V3.1","Qwen3-235B-A22B"]
-Notice: The model name configured on the db-gpt platform needs to be entered.
+Notice: The model name configured on the gpt-db platform needs to be entered.
 
 --------
 <b>temperature</b> <font color="gray"> float </font>

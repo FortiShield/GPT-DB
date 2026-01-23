@@ -1,5 +1,5 @@
 ---
-slug: db-gpt-llama-3.1-support
+slug: gpt-db-llama-3.1-support
 title: GPT-DB Now Supports Meta Llama 3.1 Series Models
 authors: fangyinc
 tags: [llama, LLM]

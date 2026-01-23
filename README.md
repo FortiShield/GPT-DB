@@ -73,7 +73,7 @@
 
 ## 🎉 Latest Release: V0.7.0
 
-> **A set of significant upgrades** • [View Release Notes](http://gpt.khulnasoft.com/blog/db-gpt-v070-release)
+> **A set of significant upgrades** • [View Release Notes](http://gpt.khulnasoft.com/blog/gpt-db-v070-release)
 
 ### ✨ What's New
 

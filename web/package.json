@@ -1,5 +1,5 @@
 {
-  "name": "db-gpt-web",
+  "name": "gpt-db-web",
   "version": "0.1.0",
   "private": true,
   "description": "GPT-DB WebUI",

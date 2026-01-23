@@ -18,7 +18,7 @@ $ gptdb start controller
 
 ## View log
 ```shell
-$ docker logs db-gpt-webserver-1 -f
+$ docker logs gpt-db-webserver-1 -f
 ```
 By default, `Model Server` will start on port `8000`
 

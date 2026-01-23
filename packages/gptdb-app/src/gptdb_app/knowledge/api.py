@@ -426,7 +426,7 @@ async def document_upload(
                         knowledge_space_service.create_knowledge_space,
                         KnowledgeSpaceRequest(
                             name=safe_space_name,
-                            desc="first db-gpt rag application",
+                            desc="first gpt-db rag application",
                             owner="gptdb",
                         ),
                     )

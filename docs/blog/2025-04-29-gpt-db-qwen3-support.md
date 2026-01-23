@@ -1,5 +1,5 @@
 ---
-slug: db-gpt-qwen3-support
+slug: gpt-db-qwen3-support
 title: GPT-DB Now Supports Qwen3 Series Models
 authors: fangyinc
 tags: [Qwen, Qwen3, LLM]
